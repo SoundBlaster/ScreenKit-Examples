@@ -1,0 +1,42 @@
+{
+  "originHash" : "f14dfa59f4748175f1ecac0a1cf44e4d5228be396d1cefa57485da3a44ab7eee",
+  "pins" : [
+    {
+      "identity" : "nesteda11yids",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SoundBlaster/NestedA11yIDs.git",
+      "state" : {
+        "revision" : "ad123fbc8dda58f20de1e6fbd21120bcfbaabf85",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "patchwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SoundBlaster/Patchwork.git",
+      "state" : {
+        "revision" : "6374df05819de9feddb5492ce4cb2463411a081f",
+        "version" : "0.1.2"
+      }
+    },
+    {
+      "identity" : "screenkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SoundBlaster/ScreenKit.git",
+      "state" : {
+        "revision" : "32a81068dc7d4dfc1ff77633aa20c58bc9470012",
+        "version" : "0.2.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "4799286537280063c85a32f09884cfbca301b1a1",
+        "version" : "602.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
