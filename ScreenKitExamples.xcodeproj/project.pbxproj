@@ -1,0 +1,1292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		017817241265508611170A27 /* ToNaToCompareScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72141A55E3D7C1FDA3BE5DD5 /* ToNaToCompareScreenFactory.swift */; };
+		1253FFEB7A538275BA998D40 /* MixedContentProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9011B749C3C59AEC14AD31 /* MixedContentProbe.swift */; };
+		12F13A302199751EE8F9D909 /* ToNaToOnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984951B5BCE2F89BAD4744F5 /* ToNaToOnboardingFactory.swift */; };
+		13C701400CA8775B30B1E587 /* ToNaToCompareScreenFactory+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84288D7EC56A09094122EDB /* ToNaToCompareScreenFactory+UI.swift */; };
+		1A36CB9F98EE4FA38545B984 /* ScreenKitLabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136F99117F90375FA688F66A /* ScreenKitLabApp.swift */; };
+		1E0B1DAB40C9D4EE3B8749D0 /* ToNaToRootFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59127FDE65559005DF7CAC /* ToNaToRootFactoryTests.swift */; };
+		2F13C2B0028B83D29A59931D /* PricePerUnitCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08022F97CA282E0A47BDAF55 /* PricePerUnitCalculatorTests.swift */; };
+		2F23513D8566556899F63B01 /* ToNaToCompareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2490A975232D7C31E8A1CB8 /* ToNaToCompareModel.swift */; };
+		30C8CFD1E53FB01C7399D85F /* ContainerProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1049F5C4B3BCCDCB84D0392C /* ContainerProbe.swift */; };
+		3933397561B59AB0F587AC97 /* ProductEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D4B447A2EBFAE5F926B10D /* ProductEntry.swift */; };
+		418F26E0B423A4E7C400330E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67F8F0B42E1437E6699A9E62 /* Assets.xcassets */; };
+		41A2A7ED0A619834CD82D3E7 /* ToNaToDetailScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480ABDEE6A780E06A4D56AC /* ToNaToDetailScreenTests.swift */; };
+		4213A287A19CF9EA01E11CA8 /* ToNaToCompareScreenFactory+Pricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B65CF0B9DE81487A3F3C35 /* ToNaToCompareScreenFactory+Pricing.swift */; };
+		423BC1ABFA2491724ABB53B2 /* ToNaToHistoryScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C9C625E15C9FAC29F084 /* ToNaToHistoryScreenTests.swift */; };
+		4EDBAB972C4FBDDB3A0CC3DC /* Patchwork in Frameworks */ = {isa = PBXBuildFile; productRef = 10404656E008A75D82AD424C /* Patchwork */; };
+		522866821CE8C32DF15A2446 /* ScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4861439C2E2616855B0E676E /* ScreenKit */; };
+		55103BB0981557B64C4C7A99 /* ToNaToCompareModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1B1155448A6625EB18A760 /* ToNaToCompareModelTests.swift */; };
+		617756E8770B416970CC1A1B /* ToNaToHistoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87553272C18DBBE6818E4C0C /* ToNaToHistoryStore.swift */; };
+		62ED1E36570D6D87A6321117 /* ToNaToDetailScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EDD6CE1F56F1F28B3026BD /* ToNaToDetailScreenFactory.swift */; };
+		65227EEE96A6AA38497C192C /* LegacyContentProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E480CFA20D60BB9ECDC32691 /* LegacyContentProbe.swift */; };
+		7522092C6B0556D1BD1D0409 /* ToNaToAppCopyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91D5D6940B5B0C6C1A78E98 /* ToNaToAppCopyTests.swift */; };
+		7ADBCE446657AF2E068CB257 /* ToNaToCompareScreenFactory+Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3760A0828EF22B201AD4AD /* ToNaToCompareScreenFactory+Entries.swift */; };
+		8B304478BEB8B9417F8176A5 /* ToNaToCompareScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E421BC49E3CCE05F83BCEC /* ToNaToCompareScreenTests.swift */; };
+		8CBC4B9334BDEB68F843E814 /* ProductUnitConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C09208FE040984F42DFEBA /* ProductUnitConversionTests.swift */; };
+		90A61C2678C484D5A51C3092 /* ProductUnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D78D1C48454054F828ACD3F /* ProductUnitConverter.swift */; };
+		97CD5FD8E87FA97B6C3E83BB /* Patchwork in Frameworks */ = {isa = PBXBuildFile; productRef = 61C963D7E675A0D7E34EE944 /* Patchwork */; };
+		98FA7F15296677E294B2BDF6 /* ScreenKitLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F7EDF5089AD0EA0184ED83 /* ScreenKitLabUITests.swift */; };
+		99578373D3D7BADF26968D88 /* ScreenContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AFC4AEC36C9756C3CAE56 /* ScreenContainerTests.swift */; };
+		9A61EEFB5CCEFAAF74BA79B9 /* NestedA11yIDs in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCBCB32E5FE7AF897481E76 /* NestedA11yIDs */; };
+		A552A4A9AF06BAA662C61021 /* ToNaToAccessibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EA4EB383C37D6889390B9 /* ToNaToAccessibilityTests.swift */; };
+		A9118720852241CDD4328127 /* ScreenMacroProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEE3AA91FCDE28ECE4698D /* ScreenMacroProbe.swift */; };
+		B0A4CD811F9960591D40F9C0 /* ToNaToAppCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBF82A5DEA0EF2C16E3F01 /* ToNaToAppCopy.swift */; };
+		B7353CAE1C4EAE916977A38D /* ToNaToCompareRowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136AC33D3AC2A801B913F9F /* ToNaToCompareRowsTests.swift */; };
+		B7EC18D0CE09821879F4FDE9 /* ScreenKit in Frameworks */ = {isa = PBXBuildFile; productRef = B50712A420457B981C20D212 /* ScreenKit */; };
+		C1969DE37FB9808C684409D8 /* ToNaToRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784A1D325F1E98A220E7214B /* ToNaToRootView.swift */; };
+		D451CC83038D19AB4F4EA59B /* ProductEntryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8527DE5B13907A88F125209 /* ProductEntryTests.swift */; };
+		D7945ED9DFB8B59510CDC26D /* ToNaToRootFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E0F42C27BC1D501E765762 /* ToNaToRootFactory.swift */; };
+		DE6E50A8EACBE9AAA283F0D0 /* PricePerUnitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C313B6DCF181BE0A17F21F /* PricePerUnitCalculator.swift */; };
+		E407544E5AEEB78E83FBA29B /* ToNaToApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53F2EB5E81BB5F539D575E1 /* ToNaToApp.swift */; };
+		E60B28F1EC0F299270608C89 /* ScreenKitLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8327C35AF850AF2338DBF84 /* ScreenKitLabTests.swift */; };
+		ECE09339CA3027479C829CB3 /* ToNaToHistoryScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2949EA9E2A250CE5229AFCA /* ToNaToHistoryScreenFactory.swift */; };
+		EDD207546CA284E6333E4A5C /* SectionedContentProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */; };
+		F5E95736F18A201E58D6D7AE /* ToNaToHistoryStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303506BE2E27C3037058A567 /* ToNaToHistoryStoreTests.swift */; };
+		FAFD912BADCFDC8A4244E9B3 /* ToNaToUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387392C695C19BF4F5E7EC76 /* ToNaToUITests.swift */; };
+		FCCC7577E236494F5BAB9BCB /* ToNaToSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFD160520CAD8A1403977D /* ToNaToSnapshot.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B25A05DA97DFE5590D178DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58224C5330241B1072A75CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B92E7D8EC77561F735F92E89;
+			remoteInfo = ScreenKitLab;
+		};
+		A430DD664635C0ABDA9C8390 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58224C5330241B1072A75CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBF179E0E345F1A75F797A1F;
+			remoteInfo = ToNaTo;
+		};
+		E3B4D3DABE6E3F60B73399A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58224C5330241B1072A75CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B92E7D8EC77561F735F92E89;
+			remoteInfo = ScreenKitLab;
+		};
+		FE3679C90B6DAC70327A9A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58224C5330241B1072A75CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBF179E0E345F1A75F797A1F;
+			remoteInfo = ToNaTo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		003EB9FCB78EE6A887AABBD0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13EAA4E66F93CA4C94CAAA9D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		174CD4C23F8C9CAC285CCCCD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0BABCCF0CEDC93FA34EFE0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58CCD2089FA522C46953DBF2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEE6241A4012DFC8B3381A46 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03B65CF0B9DE81487A3F3C35 /* ToNaToCompareScreenFactory+Pricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+Pricing.swift"; sourceTree = "<group>"; };
+		0480ABDEE6A780E06A4D56AC /* ToNaToDetailScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToDetailScreenTests.swift; sourceTree = "<group>"; };
+		08022F97CA282E0A47BDAF55 /* PricePerUnitCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerUnitCalculatorTests.swift; sourceTree = "<group>"; };
+		0B9011B749C3C59AEC14AD31 /* MixedContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedContentProbe.swift; sourceTree = "<group>"; };
+		1049F5C4B3BCCDCB84D0392C /* ContainerProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProbe.swift; sourceTree = "<group>"; };
+		12D4B447A2EBFAE5F926B10D /* ProductEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntry.swift; sourceTree = "<group>"; };
+		136F99117F90375FA688F66A /* ScreenKitLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKitLabApp.swift; sourceTree = "<group>"; };
+		170EA4EB383C37D6889390B9 /* ToNaToAccessibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToAccessibilityTests.swift; sourceTree = "<group>"; };
+		1CDEE3AA91FCDE28ECE4698D /* ScreenMacroProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMacroProbe.swift; sourceTree = "<group>"; };
+		1D78D1C48454054F828ACD3F /* ProductUnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUnitConverter.swift; sourceTree = "<group>"; };
+		29B6569E21F74A82D6EA6A67 /* ToNaTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToNaTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7AFC4AEC36C9756C3CAE56 /* ScreenContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenContainerTests.swift; sourceTree = "<group>"; };
+		303506BE2E27C3037058A567 /* ToNaToHistoryStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToHistoryStoreTests.swift; sourceTree = "<group>"; };
+		387392C695C19BF4F5E7EC76 /* ToNaToUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToUITests.swift; sourceTree = "<group>"; };
+		3E3FE2C36371BBE248D518A4 /* ToNaToTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToNaToTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		403A6EA02E49D1B7DB491D86 /* ScreenKitLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenKitLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BDBF82A5DEA0EF2C16E3F01 /* ToNaToAppCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToAppCopy.swift; sourceTree = "<group>"; };
+		5C202FB28BCFA44621B8AA1A /* ToNaToUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToNaToUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66EDD6CE1F56F1F28B3026BD /* ToNaToDetailScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToDetailScreenFactory.swift; sourceTree = "<group>"; };
+		67F8F0B42E1437E6699A9E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69BFD160520CAD8A1403977D /* ToNaToSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToSnapshot.swift; sourceTree = "<group>"; };
+		72141A55E3D7C1FDA3BE5DD5 /* ToNaToCompareScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareScreenFactory.swift; sourceTree = "<group>"; };
+		784A1D325F1E98A220E7214B /* ToNaToRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToRootView.swift; sourceTree = "<group>"; };
+		7F1B1155448A6625EB18A760 /* ToNaToCompareModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareModelTests.swift; sourceTree = "<group>"; };
+		80C09208FE040984F42DFEBA /* ProductUnitConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUnitConversionTests.swift; sourceTree = "<group>"; };
+		87553272C18DBBE6818E4C0C /* ToNaToHistoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToHistoryStore.swift; sourceTree = "<group>"; };
+		8B55C9C625E15C9FAC29F084 /* ToNaToHistoryScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToHistoryScreenTests.swift; sourceTree = "<group>"; };
+		93F7EDF5089AD0EA0184ED83 /* ScreenKitLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKitLabUITests.swift; sourceTree = "<group>"; };
+		96E421BC49E3CCE05F83BCEC /* ToNaToCompareScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareScreenTests.swift; sourceTree = "<group>"; };
+		984951B5BCE2F89BAD4744F5 /* ToNaToOnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToOnboardingFactory.swift; sourceTree = "<group>"; };
+		9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedContentProbe.swift; sourceTree = "<group>"; };
+		B136AC33D3AC2A801B913F9F /* ToNaToCompareRowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareRowsTests.swift; sourceTree = "<group>"; };
+		B53F2EB5E81BB5F539D575E1 /* ToNaToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToApp.swift; sourceTree = "<group>"; };
+		B5E0F42C27BC1D501E765762 /* ToNaToRootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToRootFactory.swift; sourceTree = "<group>"; };
+		BB702072976FCF4F32E3F7D4 /* ScreenKitLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenKitLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE59127FDE65559005DF7CAC /* ToNaToRootFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToRootFactoryTests.swift; sourceTree = "<group>"; };
+		C46331A1919215AE918D7A6C /* ScreenKitLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenKitLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84288D7EC56A09094122EDB /* ToNaToCompareScreenFactory+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+UI.swift"; sourceTree = "<group>"; };
+		C8527DE5B13907A88F125209 /* ProductEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntryTests.swift; sourceTree = "<group>"; };
+		DB3760A0828EF22B201AD4AD /* ToNaToCompareScreenFactory+Entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+Entries.swift"; sourceTree = "<group>"; };
+		E2949EA9E2A250CE5229AFCA /* ToNaToHistoryScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToHistoryScreenFactory.swift; sourceTree = "<group>"; };
+		E480CFA20D60BB9ECDC32691 /* LegacyContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyContentProbe.swift; sourceTree = "<group>"; };
+		E91D5D6940B5B0C6C1A78E98 /* ToNaToAppCopyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToAppCopyTests.swift; sourceTree = "<group>"; };
+		F2490A975232D7C31E8A1CB8 /* ToNaToCompareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareModel.swift; sourceTree = "<group>"; };
+		F3C313B6DCF181BE0A17F21F /* PricePerUnitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerUnitCalculator.swift; sourceTree = "<group>"; };
+		F8327C35AF850AF2338DBF84 /* ScreenKitLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKitLabTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D5FBC2E2DDE0CC9B31110D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5028023097478C05E3044B32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522866821CE8C32DF15A2446 /* ScreenKit in Frameworks */,
+				97CD5FD8E87FA97B6C3E83BB /* Patchwork in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6198C01D931F30E38E176734 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7EC18D0CE09821879F4FDE9 /* ScreenKit in Frameworks */,
+				4EDBAB972C4FBDDB3A0CC3DC /* Patchwork in Frameworks */,
+				9A61EEFB5CCEFAAF74BA79B9 /* NestedA11yIDs in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE31F8264941C0749FE4965 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7B5857A3BD48AB60823E210 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E64B09AB52A0881CC3A01572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0621C96F8F521D4B9F4783BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB702072976FCF4F32E3F7D4 /* ScreenKitLab.app */,
+				403A6EA02E49D1B7DB491D86 /* ScreenKitLabTests.xctest */,
+				C46331A1919215AE918D7A6C /* ScreenKitLabUITests.xctest */,
+				29B6569E21F74A82D6EA6A67 /* ToNaTo.app */,
+				3E3FE2C36371BBE248D518A4 /* ToNaToTests.xctest */,
+				5C202FB28BCFA44621B8AA1A /* ToNaToUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		417062EE770AD2C7BF8A3926 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67F8F0B42E1437E6699A9E62 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B3C8D29685328AA8650691F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2D7AFC4AEC36C9756C3CAE56 /* ScreenContainerTests.swift */,
+				F8327C35AF850AF2338DBF84 /* ScreenKitLabTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5F0D147044399796015ACA60 /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				93F7EDF5089AD0EA0184ED83 /* ScreenKitLabUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		693324C7C7EBCDEA94320376 = {
+			isa = PBXGroup;
+			children = (
+				0621C96F8F521D4B9F4783BB /* Products */,
+				BFF98EE8426D830ECF6C94FD /* Project */,
+			);
+			sourceTree = "<group>";
+		};
+		BBC50325E464F4B15105C72B /* UITests */ = {
+			isa = PBXGroup;
+			children = (
+				387392C695C19BF4F5E7EC76 /* ToNaToUITests.swift */,
+			);
+			path = UITests;
+			sourceTree = "<group>";
+		};
+		BFF98EE8426D830ECF6C94FD /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				FEE79620E157220D7B48B4C1 /* ScreenKitLab */,
+				FC18D1FE17BBC844307BD504 /* ToNaTo */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		C23F4824B2826ED543B763ED /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				417062EE770AD2C7BF8A3926 /* Resources */,
+				F3C313B6DCF181BE0A17F21F /* PricePerUnitCalculator.swift */,
+				12D4B447A2EBFAE5F926B10D /* ProductEntry.swift */,
+				1D78D1C48454054F828ACD3F /* ProductUnitConverter.swift */,
+				B53F2EB5E81BB5F539D575E1 /* ToNaToApp.swift */,
+				4BDBF82A5DEA0EF2C16E3F01 /* ToNaToAppCopy.swift */,
+				F2490A975232D7C31E8A1CB8 /* ToNaToCompareModel.swift */,
+				72141A55E3D7C1FDA3BE5DD5 /* ToNaToCompareScreenFactory.swift */,
+				DB3760A0828EF22B201AD4AD /* ToNaToCompareScreenFactory+Entries.swift */,
+				03B65CF0B9DE81487A3F3C35 /* ToNaToCompareScreenFactory+Pricing.swift */,
+				C84288D7EC56A09094122EDB /* ToNaToCompareScreenFactory+UI.swift */,
+				66EDD6CE1F56F1F28B3026BD /* ToNaToDetailScreenFactory.swift */,
+				E2949EA9E2A250CE5229AFCA /* ToNaToHistoryScreenFactory.swift */,
+				87553272C18DBBE6818E4C0C /* ToNaToHistoryStore.swift */,
+				984951B5BCE2F89BAD4744F5 /* ToNaToOnboardingFactory.swift */,
+				B5E0F42C27BC1D501E765762 /* ToNaToRootFactory.swift */,
+				784A1D325F1E98A220E7214B /* ToNaToRootView.swift */,
+				69BFD160520CAD8A1403977D /* ToNaToSnapshot.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E48111810F720B1199C1BAA8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				08022F97CA282E0A47BDAF55 /* PricePerUnitCalculatorTests.swift */,
+				C8527DE5B13907A88F125209 /* ProductEntryTests.swift */,
+				80C09208FE040984F42DFEBA /* ProductUnitConversionTests.swift */,
+				170EA4EB383C37D6889390B9 /* ToNaToAccessibilityTests.swift */,
+				E91D5D6940B5B0C6C1A78E98 /* ToNaToAppCopyTests.swift */,
+				7F1B1155448A6625EB18A760 /* ToNaToCompareModelTests.swift */,
+				B136AC33D3AC2A801B913F9F /* ToNaToCompareRowsTests.swift */,
+				96E421BC49E3CCE05F83BCEC /* ToNaToCompareScreenTests.swift */,
+				0480ABDEE6A780E06A4D56AC /* ToNaToDetailScreenTests.swift */,
+				8B55C9C625E15C9FAC29F084 /* ToNaToHistoryScreenTests.swift */,
+				303506BE2E27C3037058A567 /* ToNaToHistoryStoreTests.swift */,
+				BE59127FDE65559005DF7CAC /* ToNaToRootFactoryTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F12751E4858E83DCD097B727 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1049F5C4B3BCCDCB84D0392C /* ContainerProbe.swift */,
+				E480CFA20D60BB9ECDC32691 /* LegacyContentProbe.swift */,
+				0B9011B749C3C59AEC14AD31 /* MixedContentProbe.swift */,
+				136F99117F90375FA688F66A /* ScreenKitLabApp.swift */,
+				1CDEE3AA91FCDE28ECE4698D /* ScreenMacroProbe.swift */,
+				9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FC18D1FE17BBC844307BD504 /* ToNaTo */ = {
+			isa = PBXGroup;
+			children = (
+				C23F4824B2826ED543B763ED /* Sources */,
+				E48111810F720B1199C1BAA8 /* Tests */,
+				BBC50325E464F4B15105C72B /* UITests */,
+			);
+			path = ToNaTo;
+			sourceTree = "<group>";
+		};
+		FEE79620E157220D7B48B4C1 /* ScreenKitLab */ = {
+			isa = PBXGroup;
+			children = (
+				F12751E4858E83DCD097B727 /* Sources */,
+				5B3C8D29685328AA8650691F /* Tests */,
+				5F0D147044399796015ACA60 /* UITests */,
+			);
+			path = ScreenKitLab;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17FE52E546BFFE2B83A95AAD /* ScreenKitLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF514852358C0CB6FEBF5225 /* Build configuration list for PBXNativeTarget "ScreenKitLabTests" */;
+			buildPhases = (
+				C7AD9C8B7CBE37CEA656FA95 /* Sources */,
+				95F1D8F9CCE9E3C4245499A6 /* Resources */,
+				9DE31F8264941C0749FE4965 /* Frameworks */,
+				FEE6241A4012DFC8B3381A46 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71416EB19596CA1975DE593C /* PBXTargetDependency */,
+			);
+			name = ScreenKitLabTests;
+			packageProductDependencies = (
+			);
+			productName = ScreenKitLabTests;
+			productReference = 403A6EA02E49D1B7DB491D86 /* ScreenKitLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		423E5EA050FFA83F391BF23F /* ScreenKitLabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D428EFE2F0B82FBDDE0BDA2F /* Build configuration list for PBXNativeTarget "ScreenKitLabUITests" */;
+			buildPhases = (
+				F4B8DC001CFBFE537D40FCF3 /* Sources */,
+				3341F75C3950AB61DFD7CC4D /* Resources */,
+				2D5FBC2E2DDE0CC9B31110D2 /* Frameworks */,
+				003EB9FCB78EE6A887AABBD0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				198AC36A5B7CE60F624CA51A /* PBXTargetDependency */,
+			);
+			name = ScreenKitLabUITests;
+			packageProductDependencies = (
+			);
+			productName = ScreenKitLabUITests;
+			productReference = C46331A1919215AE918D7A6C /* ScreenKitLabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4360C6C4A5CF66F478A27693 /* ToNaToTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A53E63FD3DA8E4B85818CBF /* Build configuration list for PBXNativeTarget "ToNaToTests" */;
+			buildPhases = (
+				8B00148586785CDE5D136674 /* Sources */,
+				5CE122FA1772653E5F64EA38 /* Resources */,
+				E64B09AB52A0881CC3A01572 /* Frameworks */,
+				58CCD2089FA522C46953DBF2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AEBA22CC1B8633D04DF5EE3 /* PBXTargetDependency */,
+			);
+			name = ToNaToTests;
+			packageProductDependencies = (
+			);
+			productName = ToNaToTests;
+			productReference = 3E3FE2C36371BBE248D518A4 /* ToNaToTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B92E7D8EC77561F735F92E89 /* ScreenKitLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9C42B5648CDDD7B51399A9C /* Build configuration list for PBXNativeTarget "ScreenKitLab" */;
+			buildPhases = (
+				90C5B3B9027D65F66F4514E5 /* Sources */,
+				E401DC80F0BFF61E5CB42B40 /* Resources */,
+				5028023097478C05E3044B32 /* Frameworks */,
+				3B0BABCCF0CEDC93FA34EFE0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScreenKitLab;
+			packageProductDependencies = (
+				4861439C2E2616855B0E676E /* ScreenKit */,
+				61C963D7E675A0D7E34EE944 /* Patchwork */,
+			);
+			productName = ScreenKitLab;
+			productReference = BB702072976FCF4F32E3F7D4 /* ScreenKitLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBF179E0E345F1A75F797A1F /* ToNaTo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8394E4DFCAA09E10D0D0D86 /* Build configuration list for PBXNativeTarget "ToNaTo" */;
+			buildPhases = (
+				AEC4214837AB8DB31D78D8E1 /* Sources */,
+				088A1CF94BEA52937BD074F7 /* Resources */,
+				6198C01D931F30E38E176734 /* Frameworks */,
+				174CD4C23F8C9CAC285CCCCD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToNaTo;
+			packageProductDependencies = (
+				B50712A420457B981C20D212 /* ScreenKit */,
+				10404656E008A75D82AD424C /* Patchwork */,
+				5FCBCB32E5FE7AF897481E76 /* NestedA11yIDs */,
+			);
+			productName = ToNaTo;
+			productReference = 29B6569E21F74A82D6EA6A67 /* ToNaTo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF15EB07A185944A92B54D01 /* ToNaToUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF4142737998FDAF872FAA93 /* Build configuration list for PBXNativeTarget "ToNaToUITests" */;
+			buildPhases = (
+				92566BAAABAC3572A83E987C /* Sources */,
+				BD45F20ADBEC401CA41D69EC /* Resources */,
+				D7B5857A3BD48AB60823E210 /* Frameworks */,
+				13EAA4E66F93CA4C94CAAA9D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF56EF5CA03185CC19487CAB /* PBXTargetDependency */,
+			);
+			name = ToNaToUITests;
+			packageProductDependencies = (
+			);
+			productName = ToNaToUITests;
+			productReference = 5C202FB28BCFA44621B8AA1A /* ToNaToUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D58224C5330241B1072A75CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				TargetAttributes = {
+					17FE52E546BFFE2B83A95AAD = {
+						TestTargetID = B92E7D8EC77561F735F92E89;
+					};
+					423E5EA050FFA83F391BF23F = {
+						TestTargetID = B92E7D8EC77561F735F92E89;
+					};
+					4360C6C4A5CF66F478A27693 = {
+						TestTargetID = EBF179E0E345F1A75F797A1F;
+					};
+					EF15EB07A185944A92B54D01 = {
+						TestTargetID = EBF179E0E345F1A75F797A1F;
+					};
+				};
+			};
+			buildConfigurationList = F249F4D551C3BEB99EE3AF99 /* Build configuration list for PBXProject "ScreenKitExamples" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 693324C7C7EBCDEA94320376;
+			packageReferences = (
+				A94C1E2FEE39AF4DC99AF3EC /* XCRemoteSwiftPackageReference "NestedA11yIDs" */,
+				5C7146888E0FACCFA393E54C /* XCRemoteSwiftPackageReference "Patchwork" */,
+				C2F8F7A11FCF5114CDEC131E /* XCRemoteSwiftPackageReference "ScreenKit" */,
+			);
+			productRefGroup = 0621C96F8F521D4B9F4783BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B92E7D8EC77561F735F92E89 /* ScreenKitLab */,
+				17FE52E546BFFE2B83A95AAD /* ScreenKitLabTests */,
+				423E5EA050FFA83F391BF23F /* ScreenKitLabUITests */,
+				EBF179E0E345F1A75F797A1F /* ToNaTo */,
+				4360C6C4A5CF66F478A27693 /* ToNaToTests */,
+				EF15EB07A185944A92B54D01 /* ToNaToUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		088A1CF94BEA52937BD074F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				418F26E0B423A4E7C400330E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3341F75C3950AB61DFD7CC4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CE122FA1772653E5F64EA38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F1D8F9CCE9E3C4245499A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD45F20ADBEC401CA41D69EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E401DC80F0BFF61E5CB42B40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B00148586785CDE5D136674 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F13C2B0028B83D29A59931D /* PricePerUnitCalculatorTests.swift in Sources */,
+				D451CC83038D19AB4F4EA59B /* ProductEntryTests.swift in Sources */,
+				8CBC4B9334BDEB68F843E814 /* ProductUnitConversionTests.swift in Sources */,
+				A552A4A9AF06BAA662C61021 /* ToNaToAccessibilityTests.swift in Sources */,
+				7522092C6B0556D1BD1D0409 /* ToNaToAppCopyTests.swift in Sources */,
+				55103BB0981557B64C4C7A99 /* ToNaToCompareModelTests.swift in Sources */,
+				B7353CAE1C4EAE916977A38D /* ToNaToCompareRowsTests.swift in Sources */,
+				8B304478BEB8B9417F8176A5 /* ToNaToCompareScreenTests.swift in Sources */,
+				41A2A7ED0A619834CD82D3E7 /* ToNaToDetailScreenTests.swift in Sources */,
+				423BC1ABFA2491724ABB53B2 /* ToNaToHistoryScreenTests.swift in Sources */,
+				F5E95736F18A201E58D6D7AE /* ToNaToHistoryStoreTests.swift in Sources */,
+				1E0B1DAB40C9D4EE3B8749D0 /* ToNaToRootFactoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90C5B3B9027D65F66F4514E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30C8CFD1E53FB01C7399D85F /* ContainerProbe.swift in Sources */,
+				65227EEE96A6AA38497C192C /* LegacyContentProbe.swift in Sources */,
+				1253FFEB7A538275BA998D40 /* MixedContentProbe.swift in Sources */,
+				1A36CB9F98EE4FA38545B984 /* ScreenKitLabApp.swift in Sources */,
+				A9118720852241CDD4328127 /* ScreenMacroProbe.swift in Sources */,
+				EDD207546CA284E6333E4A5C /* SectionedContentProbe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92566BAAABAC3572A83E987C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAFD912BADCFDC8A4244E9B3 /* ToNaToUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC4214837AB8DB31D78D8E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE6E50A8EACBE9AAA283F0D0 /* PricePerUnitCalculator.swift in Sources */,
+				3933397561B59AB0F587AC97 /* ProductEntry.swift in Sources */,
+				90A61C2678C484D5A51C3092 /* ProductUnitConverter.swift in Sources */,
+				E407544E5AEEB78E83FBA29B /* ToNaToApp.swift in Sources */,
+				B0A4CD811F9960591D40F9C0 /* ToNaToAppCopy.swift in Sources */,
+				2F23513D8566556899F63B01 /* ToNaToCompareModel.swift in Sources */,
+				7ADBCE446657AF2E068CB257 /* ToNaToCompareScreenFactory+Entries.swift in Sources */,
+				4213A287A19CF9EA01E11CA8 /* ToNaToCompareScreenFactory+Pricing.swift in Sources */,
+				13C701400CA8775B30B1E587 /* ToNaToCompareScreenFactory+UI.swift in Sources */,
+				017817241265508611170A27 /* ToNaToCompareScreenFactory.swift in Sources */,
+				62ED1E36570D6D87A6321117 /* ToNaToDetailScreenFactory.swift in Sources */,
+				ECE09339CA3027479C829CB3 /* ToNaToHistoryScreenFactory.swift in Sources */,
+				617756E8770B416970CC1A1B /* ToNaToHistoryStore.swift in Sources */,
+				12F13A302199751EE8F9D909 /* ToNaToOnboardingFactory.swift in Sources */,
+				D7945ED9DFB8B59510CDC26D /* ToNaToRootFactory.swift in Sources */,
+				C1969DE37FB9808C684409D8 /* ToNaToRootView.swift in Sources */,
+				FCCC7577E236494F5BAB9BCB /* ToNaToSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7AD9C8B7CBE37CEA656FA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99578373D3D7BADF26968D88 /* ScreenContainerTests.swift in Sources */,
+				E60B28F1EC0F299270608C89 /* ScreenKitLabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4B8DC001CFBFE537D40FCF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98FA7F15296677E294B2BDF6 /* ScreenKitLabUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		198AC36A5B7CE60F624CA51A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScreenKitLab;
+			target = B92E7D8EC77561F735F92E89 /* ScreenKitLab */;
+			targetProxy = 7B25A05DA97DFE5590D178DC /* PBXContainerItemProxy */;
+		};
+		71416EB19596CA1975DE593C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScreenKitLab;
+			target = B92E7D8EC77561F735F92E89 /* ScreenKitLab */;
+			targetProxy = E3B4D3DABE6E3F60B73399A6 /* PBXContainerItemProxy */;
+		};
+		9AEBA22CC1B8633D04DF5EE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ToNaTo;
+			target = EBF179E0E345F1A75F797A1F /* ToNaTo */;
+			targetProxy = A430DD664635C0ABDA9C8390 /* PBXContainerItemProxy */;
+		};
+		BF56EF5CA03185CC19487CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ToNaTo;
+			target = EBF179E0E345F1A75F797A1F /* ToNaTo */;
+			targetProxy = FE3679C90B6DAC70327A9A4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0D903E50AD1C9F078F41D21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab.uitests;
+				PRODUCT_NAME = ScreenKitLabUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenKitLab;
+			};
+			name = Release;
+		};
+		11FD11933800C0CED3BEE74C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab.tests;
+				PRODUCT_NAME = ScreenKitLabTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenKitLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenKitLab";
+				TEST_TARGET_NAME = ScreenKitLab;
+			};
+			name = Release;
+		};
+		337BC40EAFE3D53B98974A3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab.tests;
+				PRODUCT_NAME = ScreenKitLabTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScreenKitLab.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScreenKitLab";
+				TEST_TARGET_NAME = ScreenKitLab;
+			};
+			name = Debug;
+		};
+		36582135E893D38E8C411B96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ToNaTo";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				INFOPLIST_KEY_CFBundleShortVersionString = 0.1.0;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato;
+				PRODUCT_NAME = ToNaTo;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A1D6CD171B31C49D8DF44E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab.uitests;
+				PRODUCT_NAME = ScreenKitLabUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScreenKitLab;
+			};
+			name = Debug;
+		};
+		86A94E92CDCE5350EB9B71E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ScreenKit Lab";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab;
+				PRODUCT_NAME = ScreenKitLab;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E8844736438FDBD17C4E5C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A44B63C910777F4C4F80DA8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato.tests;
+				PRODUCT_NAME = ToNaToTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToNaTo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToNaTo";
+				TEST_TARGET_NAME = ToNaTo;
+			};
+			name = Debug;
+		};
+		AC5D6D8CE7352C742D64E706 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE5EA03A76665971FBC3CC98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato.uitests;
+				PRODUCT_NAME = ToNaToUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToNaTo;
+			};
+			name = Debug;
+		};
+		C2B1380F94883D504B231388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ToNaTo";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				INFOPLIST_KEY_CFBundleShortVersionString = 0.1.0;
+				INFOPLIST_KEY_CFBundleVersion = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato;
+				PRODUCT_NAME = ToNaTo;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDD0C88A36440FC7327D0C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato.tests;
+				PRODUCT_NAME = ToNaToTests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToNaTo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToNaTo";
+				TEST_TARGET_NAME = ToNaTo;
+			};
+			name = Release;
+		};
+		FB7C969D7E806057AF3982AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.tonato.uitests;
+				PRODUCT_NAME = ToNaToUITests;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ToNaTo;
+			};
+			name = Release;
+		};
+		FBD1D208ACC4543CC798BFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ScreenKit Lab";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soundblaster.screenkit.lab;
+				PRODUCT_NAME = ScreenKitLab;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A53E63FD3DA8E4B85818CBF /* Build configuration list for PBXNativeTarget "ToNaToTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A44B63C910777F4C4F80DA8A /* Debug */,
+				EDD0C88A36440FC7327D0C4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8394E4DFCAA09E10D0D0D86 /* Build configuration list for PBXNativeTarget "ToNaTo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2B1380F94883D504B231388 /* Debug */,
+				36582135E893D38E8C411B96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF514852358C0CB6FEBF5225 /* Build configuration list for PBXNativeTarget "ScreenKitLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				337BC40EAFE3D53B98974A3A /* Debug */,
+				11FD11933800C0CED3BEE74C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9C42B5648CDDD7B51399A9C /* Build configuration list for PBXNativeTarget "ScreenKitLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86A94E92CDCE5350EB9B71E6 /* Debug */,
+				FBD1D208ACC4543CC798BFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D428EFE2F0B82FBDDE0BDA2F /* Build configuration list for PBXNativeTarget "ScreenKitLabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A1D6CD171B31C49D8DF44E2 /* Debug */,
+				0D903E50AD1C9F078F41D21F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF4142737998FDAF872FAA93 /* Build configuration list for PBXNativeTarget "ToNaToUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE5EA03A76665971FBC3CC98 /* Debug */,
+				FB7C969D7E806057AF3982AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F249F4D551C3BEB99EE3AF99 /* Build configuration list for PBXProject "ScreenKitExamples" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E8844736438FDBD17C4E5C2 /* Debug */,
+				AC5D6D8CE7352C742D64E706 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5C7146888E0FACCFA393E54C /* XCRemoteSwiftPackageReference "Patchwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SoundBlaster/Patchwork.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.2;
+			};
+		};
+		A94C1E2FEE39AF4DC99AF3EC /* XCRemoteSwiftPackageReference "NestedA11yIDs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SoundBlaster/NestedA11yIDs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C2F8F7A11FCF5114CDEC131E /* XCRemoteSwiftPackageReference "ScreenKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SoundBlaster/ScreenKit.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10404656E008A75D82AD424C /* Patchwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Patchwork;
+		};
+		4861439C2E2616855B0E676E /* ScreenKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScreenKit;
+		};
+		5FCBCB32E5FE7AF897481E76 /* NestedA11yIDs */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NestedA11yIDs;
+		};
+		61C963D7E675A0D7E34EE944 /* Patchwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Patchwork;
+		};
+		B50712A420457B981C20D212 /* ScreenKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScreenKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D58224C5330241B1072A75CA /* Project object */;
+}
