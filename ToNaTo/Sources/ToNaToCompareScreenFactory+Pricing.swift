@@ -250,16 +250,21 @@ extension ToNaToCompareScreenFactory {
 
     static func formattedPrice(_ value: Double, currency: ToNaToCurrency) -> String {
         if value > 0 && value < 0.01 {
-            let cents = value * 100
+            let fractionalValue = value * 100
             let formatter = NumberFormatter()
             formatter.locale = Locale(identifier: "en_US_POSIX")
             formatter.numberStyle = .decimal
             formatter.minimumFractionDigits = 2
             formatter.maximumFractionDigits = 2
-            if let rendered = formatter.string(from: NSNumber(value: cents)) {
-                return "\(rendered)¢"
+            if let rendered = formatter.string(from: NSNumber(value: fractionalValue)) {
+                return "\(rendered)\(currency.fractionalCurrencySymbol)"
             }
-            return String(format: "%.2f¢", cents)
+            let rendered = String(
+                format: "%.2f",
+                locale: Locale(identifier: "en_US_POSIX"),
+                fractionalValue
+            )
+            return "\(rendered)\(currency.fractionalCurrencySymbol)"
         }
 
         let formatter = NumberFormatter()

@@ -27,6 +27,17 @@ enum ToNaToCurrency: String, CaseIterable, Sendable {
             return "£"
         }
     }
+
+    var fractionalCurrencySymbol: String {
+        switch self {
+        case .usd:
+            return "¢"
+        case .eur:
+            return "c"
+        case .gbp:
+            return "p"
+        }
+    }
 }
 
 /// App-owned draft and settings. Text edits are committed synchronously; only rendering is debounced.

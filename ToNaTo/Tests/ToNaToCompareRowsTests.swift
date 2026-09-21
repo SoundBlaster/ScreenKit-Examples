@@ -248,6 +248,13 @@ struct ToNaToCompareRowsTests {
         #expect(text == expected)
     }
 
+    @Test("fractional prices use the selected currency subunit")
+    func fractionalPricesUseTheSelectedCurrencySubunit() async throws {
+        #expect(ToNaToCompareScreenFactory.formattedPrice(0.00998, currency: .usd) == "1.00¢")
+        #expect(ToNaToCompareScreenFactory.formattedPrice(0.00998, currency: .eur) == "1.00c")
+        #expect(ToNaToCompareScreenFactory.formattedPrice(0.00998, currency: .gbp) == "1.00p")
+    }
+
     @Test("price for weight text shows placeholder for invalid entry")
     func priceForWeightTextShowsPlaceholderForInvalidEntry() async throws {
         let entry = ProductEntry(

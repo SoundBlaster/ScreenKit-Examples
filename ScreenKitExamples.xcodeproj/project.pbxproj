@@ -37,7 +37,6 @@
 		99578373D3D7BADF26968D88 /* ScreenContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7AFC4AEC36C9756C3CAE56 /* ScreenContainerTests.swift */; };
 		9A61EEFB5CCEFAAF74BA79B9 /* NestedA11yIDs in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCBCB32E5FE7AF897481E76 /* NestedA11yIDs */; };
 		A552A4A9AF06BAA662C61021 /* ToNaToAccessibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170EA4EB383C37D6889390B9 /* ToNaToAccessibilityTests.swift */; };
-		A728B2B5B158A03C3CF68F43 /* TuistBundle+ToNaTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D9B5B06365B5BF22A68110 /* TuistBundle+ToNaTo.swift */; };
 		A9118720852241CDD4328127 /* ScreenMacroProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CDEE3AA91FCDE28ECE4698D /* ScreenMacroProbe.swift */; };
 		B0A4CD811F9960591D40F9C0 /* ToNaToAppCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBF82A5DEA0EF2C16E3F01 /* ToNaToAppCopy.swift */; };
 		B7353CAE1C4EAE916977A38D /* ToNaToCompareRowsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136AC33D3AC2A801B913F9F /* ToNaToCompareRowsTests.swift */; };
@@ -51,7 +50,6 @@
 		ECE09339CA3027479C829CB3 /* ToNaToHistoryScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2949EA9E2A250CE5229AFCA /* ToNaToHistoryScreenFactory.swift */; };
 		EDD207546CA284E6333E4A5C /* SectionedContentProbe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */; };
 		F5E95736F18A201E58D6D7AE /* ToNaToHistoryStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303506BE2E27C3037058A567 /* ToNaToHistoryStoreTests.swift */; };
-		F72F9340C7FF7D3124613BB7 /* TuistAssets+ToNaTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51326265026474B11E237B90 /* TuistAssets+ToNaTo.swift */; };
 		FAFD912BADCFDC8A4244E9B3 /* ToNaToUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387392C695C19BF4F5E7EC76 /* ToNaToUITests.swift */; };
 		FCCC7577E236494F5BAB9BCB /* ToNaToSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BFD160520CAD8A1403977D /* ToNaToSnapshot.swift */; };
 /* End PBXBuildFile section */
@@ -154,14 +152,11 @@
 		03B65CF0B9DE81487A3F3C35 /* ToNaToCompareScreenFactory+Pricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+Pricing.swift"; sourceTree = "<group>"; };
 		0480ABDEE6A780E06A4D56AC /* ToNaToDetailScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToDetailScreenTests.swift; sourceTree = "<group>"; };
 		08022F97CA282E0A47BDAF55 /* PricePerUnitCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePerUnitCalculatorTests.swift; sourceTree = "<group>"; };
-		08A0373E0965B1822CD7C0CC /* ToNaToUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ToNaToUITests-Info.plist"; sourceTree = "<group>"; };
-		0B6F185397BC0CFE414ED0E1 /* ScreenKitLabUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScreenKitLabUITests-Info.plist"; sourceTree = "<group>"; };
 		0B9011B749C3C59AEC14AD31 /* MixedContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixedContentProbe.swift; sourceTree = "<group>"; };
 		1049F5C4B3BCCDCB84D0392C /* ContainerProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerProbe.swift; sourceTree = "<group>"; };
 		12D4B447A2EBFAE5F926B10D /* ProductEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntry.swift; sourceTree = "<group>"; };
 		136F99117F90375FA688F66A /* ScreenKitLabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenKitLabApp.swift; sourceTree = "<group>"; };
 		170EA4EB383C37D6889390B9 /* ToNaToAccessibilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToAccessibilityTests.swift; sourceTree = "<group>"; };
-		1C070758701B697A16DFE0FF /* ScreenKitLabTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScreenKitLabTests-Info.plist"; sourceTree = "<group>"; };
 		1CDEE3AA91FCDE28ECE4698D /* ScreenMacroProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenMacroProbe.swift; sourceTree = "<group>"; };
 		1D78D1C48454054F828ACD3F /* ProductUnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUnitConverter.swift; sourceTree = "<group>"; };
 		29B6569E21F74A82D6EA6A67 /* ToNaTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToNaTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,9 +165,7 @@
 		387392C695C19BF4F5E7EC76 /* ToNaToUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToUITests.swift; sourceTree = "<group>"; };
 		3E3FE2C36371BBE248D518A4 /* ToNaToTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToNaToTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		403A6EA02E49D1B7DB491D86 /* ScreenKitLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenKitLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43320EFCA060A8299B6C237B /* ToNaTo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ToNaTo-Info.plist"; sourceTree = "<group>"; };
 		4BDBF82A5DEA0EF2C16E3F01 /* ToNaToAppCopy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToAppCopy.swift; sourceTree = "<group>"; };
-		51326265026474B11E237B90 /* TuistAssets+ToNaTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+ToNaTo.swift"; sourceTree = "<group>"; };
 		5C202FB28BCFA44621B8AA1A /* ToNaToUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToNaToUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EDD6CE1F56F1F28B3026BD /* ToNaToDetailScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToDetailScreenFactory.swift; sourceTree = "<group>"; };
 		67F8F0B42E1437E6699A9E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -187,17 +180,14 @@
 		96E421BC49E3CCE05F83BCEC /* ToNaToCompareScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareScreenTests.swift; sourceTree = "<group>"; };
 		984951B5BCE2F89BAD4744F5 /* ToNaToOnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToOnboardingFactory.swift; sourceTree = "<group>"; };
 		9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedContentProbe.swift; sourceTree = "<group>"; };
-		AD41CD36C4D9FF6142D86D44 /* ToNaToTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ToNaToTests-Info.plist"; sourceTree = "<group>"; };
 		B136AC33D3AC2A801B913F9F /* ToNaToCompareRowsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToCompareRowsTests.swift; sourceTree = "<group>"; };
 		B53F2EB5E81BB5F539D575E1 /* ToNaToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToApp.swift; sourceTree = "<group>"; };
 		B5E0F42C27BC1D501E765762 /* ToNaToRootFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToRootFactory.swift; sourceTree = "<group>"; };
 		BB702072976FCF4F32E3F7D4 /* ScreenKitLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenKitLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE59127FDE65559005DF7CAC /* ToNaToRootFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToRootFactoryTests.swift; sourceTree = "<group>"; };
-		C3D9B5B06365B5BF22A68110 /* TuistBundle+ToNaTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+ToNaTo.swift"; sourceTree = "<group>"; };
 		C46331A1919215AE918D7A6C /* ScreenKitLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScreenKitLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84288D7EC56A09094122EDB /* ToNaToCompareScreenFactory+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+UI.swift"; sourceTree = "<group>"; };
 		C8527DE5B13907A88F125209 /* ProductEntryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEntryTests.swift; sourceTree = "<group>"; };
-		D12FB938B25FF36FBF86B22B /* ScreenKitLab-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "ScreenKitLab-Info.plist"; sourceTree = "<group>"; };
 		DB3760A0828EF22B201AD4AD /* ToNaToCompareScreenFactory+Entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToNaToCompareScreenFactory+Entries.swift"; sourceTree = "<group>"; };
 		E2949EA9E2A250CE5229AFCA /* ToNaToHistoryScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToNaToHistoryScreenFactory.swift; sourceTree = "<group>"; };
 		E480CFA20D60BB9ECDC32691 /* LegacyContentProbe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyContentProbe.swift; sourceTree = "<group>"; };
@@ -304,15 +294,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		74EFD58C49DFB334AF701301 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				51326265026474B11E237B90 /* TuistAssets+ToNaTo.swift */,
-				C3D9B5B06365B5BF22A68110 /* TuistBundle+ToNaTo.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		BBC50325E464F4B15105C72B /* UITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,7 +305,6 @@
 		BFF98EE8426D830ECF6C94FD /* Project */ = {
 			isa = PBXGroup;
 			children = (
-				FBB1D24E88C7DF321D4A5EBC /* Derived */,
 				FEE79620E157220D7B48B4C1 /* ScreenKitLab */,
 				FC18D1FE17BBC844307BD504 /* ToNaTo */,
 			);
@@ -354,19 +334,6 @@
 				69BFD160520CAD8A1403977D /* ToNaToSnapshot.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		C7D5079210CD6B55FB7D568E /* InfoPlists */ = {
-			isa = PBXGroup;
-			children = (
-				D12FB938B25FF36FBF86B22B /* ScreenKitLab-Info.plist */,
-				1C070758701B697A16DFE0FF /* ScreenKitLabTests-Info.plist */,
-				0B6F185397BC0CFE414ED0E1 /* ScreenKitLabUITests-Info.plist */,
-				43320EFCA060A8299B6C237B /* ToNaTo-Info.plist */,
-				AD41CD36C4D9FF6142D86D44 /* ToNaToTests-Info.plist */,
-				08A0373E0965B1822CD7C0CC /* ToNaToUITests-Info.plist */,
-			);
-			path = InfoPlists;
 			sourceTree = "<group>";
 		};
 		E48111810F720B1199C1BAA8 /* Tests */ = {
@@ -399,15 +366,6 @@
 				9964AEE537B2321DBC6F9FA2 /* SectionedContentProbe.swift */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		FBB1D24E88C7DF321D4A5EBC /* Derived */ = {
-			isa = PBXGroup;
-			children = (
-				C7D5079210CD6B55FB7D568E /* InfoPlists */,
-				74EFD58C49DFB334AF701301 /* Sources */,
-			);
-			path = Derived;
 			sourceTree = "<group>";
 		};
 		FC18D1FE17BBC844307BD504 /* ToNaTo */ = {
@@ -703,8 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F72F9340C7FF7D3124613BB7 /* TuistAssets+ToNaTo.swift in Sources */,
-				A728B2B5B158A03C3CF68F43 /* TuistBundle+ToNaTo.swift in Sources */,
 				DE6E50A8EACBE9AAA283F0D0 /* PricePerUnitCalculator.swift in Sources */,
 				3933397561B59AB0F587AC97 /* ProductEntry.swift in Sources */,
 				90A61C2678C484D5A51C3092 /* ProductUnitConverter.swift in Sources */,
@@ -776,7 +732,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLabUITests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -802,7 +758,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLabTests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -829,7 +785,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLabTests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -859,7 +815,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaTo-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ToNaTo";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				INFOPLIST_KEY_CFBundleShortVersionString = 0.1.0;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -882,7 +842,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLabUITests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -911,7 +871,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLab-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ScreenKit Lab";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -995,7 +957,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaToTests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1075,7 +1037,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaToUITests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1104,7 +1066,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaTo-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ToNaTo";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
+				INFOPLIST_KEY_CFBundleShortVersionString = 0.1.0;
+				INFOPLIST_KEY_CFBundleVersion = 1;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1129,7 +1095,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaToTests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1155,7 +1121,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Derived/InfoPlists/ToNaToUITests-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1183,7 +1149,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Derived/InfoPlists/ScreenKitLab-Info.plist";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "ScreenKit Lab";
+				INFOPLIST_KEY_UIObservationTrackingEnabled = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
