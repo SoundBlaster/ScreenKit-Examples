@@ -97,6 +97,38 @@ final class ScreenKitLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testVisibleHeaderUpdatesAfterScrollingTwice() {
+        let app = XCUIApplication()
+        app.launch()
+        app.buttons["Examples"].tap()
+        app.buttons["Sections"].tap()
+
+        let collection = app.collectionViews["screen.collection"]
+        XCTAssertTrue(collection.waitForExistence(timeout: 5))
+        let savedHeader = app.staticTexts.matching(
+            NSPredicate(format: "label CONTAINS %@", "Saved list")
+        ).firstMatch
+        for _ in 0..<8 where !savedHeader.isHittable {
+            collection.swipeUp()
+        }
+        XCTAssertTrue(savedHeader.waitForExistence(timeout: 5))
+        XCTAssertTrue(savedHeader.isHittable)
+
+        app.buttons["Headers"].tap()
+        XCTAssertTrue(
+            app.staticTexts["Saved list · 1"].waitForExistence(timeout: 5),
+            "The visible header must update in place after the first state change."
+        )
+
+        app.buttons["Headers"].tap()
+        XCTAssertTrue(
+            app.staticTexts["Saved list · 2"].waitForExistence(timeout: 5),
+            "The same visible header must update again after the second state change."
+        )
+        attachScreenshot(app, name: "Visible header after two reactive updates")
+    }
+
+    @MainActor
     func testMixedContentObservationAndDraftSurviveLayoutAndReorder() {
         checkMixedContent(explicitUpdates: false)
     }

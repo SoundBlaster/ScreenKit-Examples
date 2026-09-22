@@ -1,0 +1,79 @@
+name: Quality
+
+on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: ['**']
+    paths-ignore:
+      - '**/*.md'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and Test (iOS)
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      PROJECT: ScreenKitExamples.xcodeproj
+      DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+
+      - name: Identify toolchain
+        id: toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          echo "build=$(xcodebuild -version | tail -n 1 | tr ' ' '-')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache SwiftPM packages
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/SourcePackages
+          key: ${{ runner.os }}-${{ runner.arch }}-xcode-${{ steps.toolchain.outputs.build }}-${{ hashFiles('ScreenKitExamples.xcodeproj/project.pbxproj') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ runner.arch }}-xcode-
+
+      - name: Resolve package dependencies
+        run: |
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme ScreenKitLab \
+            -resolvePackageDependencies
+
+      - name: Test ScreenKitLab
+        run: |
+          xcodebuild -quiet \
+            MACOSX_DEPLOYMENT_TARGET=12.0 \
+            -skipMacroValidation \
+            -project "$PROJECT" \
+            -scheme ScreenKitLab \
+            -destination "$DESTINATION" \
+            -parallel-testing-enabled NO \
+            test
+
+      - name: Test ToNaTo
+        run: |
+          xcodebuild -quiet \
+            MACOSX_DEPLOYMENT_TARGET=12.0 \
+            -skipMacroValidation \
+            -project "$PROJECT" \
+            -scheme ToNaTo \
+            -destination "$DESTINATION" \
+            -parallel-testing-enabled NO \
+            test
