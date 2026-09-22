@@ -1,0 +1,70 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [main, master]
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: ['**']
+    paths-ignore:
+      - '**/*.md'
+  workflow_dispatch:
+
+concurrency:
+  group: ios-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build and Test (iOS)
+    runs-on: macos-26
+    env:
+      PROJECT: ScreenKitExamples.xcodeproj
+      DESTINATION: platform=iOS Simulator,name=iPhone 17 Pro,OS=latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Cache SwiftPM packages
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Developer/Xcode/SourcePackages
+          key: ${{ runner.os }}-xcode-packages-${{ hashFiles('ScreenKitExamples.xcodeproj/project.pbxproj') }}
+          restore-keys: |
+            ${{ runner.os }}-xcode-packages-
+
+      - name: Resolve package dependencies
+        run: |
+          xcodebuild \
+            -project "$PROJECT" \
+            -scheme ScreenKitLab \
+            -resolvePackageDependencies
+
+      - name: Test ScreenKitLab
+        run: |
+          xcodebuild -quiet \
+            -skipMacroValidation \
+            -project "$PROJECT" \
+            -scheme ScreenKitLab \
+            -destination "$DESTINATION" \
+            -parallel-testing-enabled NO \
+            test
+
+      - name: Test ToNaTo
+        run: |
+          xcodebuild -quiet \
+            -skipMacroValidation \
+            -project "$PROJECT" \
+            -scheme ToNaTo \
+            -destination "$DESTINATION" \
+            -parallel-testing-enabled NO \
+            test
