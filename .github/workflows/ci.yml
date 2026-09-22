@@ -122,6 +122,8 @@ jobs:
           xcodebuild -quiet \
             IPHONEOS_DEPLOYMENT_TARGET=18.0 \
             MACOSX_DEPLOYMENT_TARGET=12.0 \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ScreenKitLab \
@@ -133,6 +135,8 @@ jobs:
           xcodebuild -quiet \
             IPHONEOS_DEPLOYMENT_TARGET=18.0 \
             MACOSX_DEPLOYMENT_TARGET=12.0 \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ToNaTo \
