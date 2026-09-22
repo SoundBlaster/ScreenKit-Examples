@@ -53,6 +53,7 @@ jobs:
       - name: Test ScreenKitLab
         run: |
           xcodebuild -quiet \
+            MACOSX_DEPLOYMENT_TARGET=10.15 \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ScreenKitLab \
@@ -63,6 +64,7 @@ jobs:
       - name: Test ToNaTo
         run: |
           xcodebuild -quiet \
+            MACOSX_DEPLOYMENT_TARGET=10.15 \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ToNaTo \
