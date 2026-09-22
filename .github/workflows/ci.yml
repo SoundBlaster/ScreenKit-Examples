@@ -25,7 +25,7 @@ jobs:
     timeout-minutes: 30
     env:
       PROJECT: ScreenKitExamples.xcodeproj
-      DESTINATION: platform=iOS Simulator,name=iPhone 17 Pro,OS=latest
+      DESTINATION: platform=iOS Simulator,name=iPhone 17 Pro,OS=27.0
       MACOSX_DEPLOYMENT_TARGET: '10.15'
       DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
     steps:
