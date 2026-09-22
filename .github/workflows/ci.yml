@@ -26,7 +26,7 @@ jobs:
     env:
       PROJECT: ScreenKitExamples.xcodeproj
       DESTINATION: platform=iOS Simulator,name=iPhone 17,OS=27.0
-      MACOSX_DEPLOYMENT_TARGET: '10.15'
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
       DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
     steps:
       - name: Checkout
@@ -59,7 +59,7 @@ jobs:
       - name: Test ScreenKitLab
         run: |
           xcodebuild -quiet \
-            MACOSX_DEPLOYMENT_TARGET=10.15 \
+            MACOSX_DEPLOYMENT_TARGET=12.0 \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ScreenKitLab \
@@ -70,7 +70,7 @@ jobs:
       - name: Test ToNaTo
         run: |
           xcodebuild -quiet \
-            MACOSX_DEPLOYMENT_TARGET=10.15 \
+            MACOSX_DEPLOYMENT_TARGET=12.0 \
             -skipMacroValidation \
             -project "$PROJECT" \
             -scheme ToNaTo \
