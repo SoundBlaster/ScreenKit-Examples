@@ -57,6 +57,8 @@ jobs:
             -resolvePackageDependencies
 
       - name: Test ScreenKitLab
+        env:
+          RESULT_BUNDLE_PATH: ${{ runner.temp }}/ScreenKitLab-${{ github.run_id }}-${{ github.run_attempt }}.xcresult
         run: |
           xcodebuild -quiet \
             MACOSX_DEPLOYMENT_TARGET=12.0 \
@@ -65,9 +67,12 @@ jobs:
             -scheme ScreenKitLab \
             -destination "$DESTINATION" \
             -parallel-testing-enabled NO \
+            -resultBundlePath "$RESULT_BUNDLE_PATH" \
             test
 
       - name: Test ToNaTo
+        env:
+          RESULT_BUNDLE_PATH: ${{ runner.temp }}/ToNaTo-${{ github.run_id }}-${{ github.run_attempt }}.xcresult
         run: |
           xcodebuild -quiet \
             MACOSX_DEPLOYMENT_TARGET=12.0 \
@@ -76,7 +81,19 @@ jobs:
             -scheme ToNaTo \
             -destination "$DESTINATION" \
             -parallel-testing-enabled NO \
+            -resultBundlePath "$RESULT_BUNDLE_PATH" \
             test
+
+      - name: Upload Xcode test results on failure
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcode-test-results-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ScreenKitLab-${{ github.run_id }}-${{ github.run_attempt }}.xcresult
+            ${{ runner.temp }}/ToNaTo-${{ github.run_id }}-${{ github.run_attempt }}.xcresult
+          if-no-files-found: warn
+          retention-days: 14
 
   build-ios-18:
     name: Build (iOS 18 deployment target)
