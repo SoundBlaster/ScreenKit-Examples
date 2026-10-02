@@ -59,11 +59,15 @@ state, Low Power Mode off and foreground sampling. The UI-tooling run is kept
 to make the different conditions visible. These ratios do not establish a
 stable overhead, a speedup, or a performance threshold. They measure completion
 of an explicit update and layout, not displayed frames, scrolling, FPS or GPU.
+Also, SDK timer shutdown does not join the metric exporter's in-flight HTTP
+requests. A disabled block can overlap transport from an earlier enabled block;
+the retained results do not prove isolation between modes.
 
 Reproduce with the [runner and verification commands](README.md#reproduce-the-comparison).
 Archived reports can be validated offline by omitting `--backend` and writing
 to a new output path. Their saved network receipts describe the original run;
 the live backend gate must be run promptly after a fresh app run.
 
-The next performance gate is repeated Release measurement on a physical iPhone,
-with the same workload and Instruments evidence before adopting a budget.
+The next performance gate is an independently verified transport-drain boundary
+or separate process runs, followed by repeated Release measurement on a physical
+iPhone with the same workload and Instruments evidence before adopting a budget.

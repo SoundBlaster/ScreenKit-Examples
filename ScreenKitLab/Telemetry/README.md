@@ -75,6 +75,13 @@ in **both** modes. The disabled mode creates no sink or SDK providers. OTLP uses
 100% trace sampling, batch export and a **250 ms export interval** so export
 overlaps each block; this is more aggressive than the monitor's 2-second default.
 
+The comparison is in one process. Shutdown stops SDK timers, but the official
+metric exporter does not join all in-flight HTTP requests. Transport from an
+earlier enabled block can therefore overlap a disabled block. Warmups and
+balanced order do not prove transport isolation. Before treating the ratios as
+an overhead estimate, use separate process runs or an explicit transport-drain
+boundary, and verify it independently.
+
 The JSON includes every sample, pair/order, thermal state, app foreground state,
 configuration, runtime, pins and exporter instance. **Share report** exports the
 same file. The verifier requires eight complete blocks, valid visible content,
