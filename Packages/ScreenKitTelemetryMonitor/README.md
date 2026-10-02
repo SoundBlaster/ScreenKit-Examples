@@ -17,6 +17,8 @@ let controller = screen.telemetry(monitor.adapter, name: "catalog").makeViewCont
 
 Run this on `@MainActor` and retain the monitor for the screen's lifetime. Call
 `await monitor.shutdown()` after finishing, outside the measured update path.
+Shutdown collects metrics once more before stopping the periodic reader; neither
+shutdown nor flush confirms server receipt. Verify ingestion separately.
 `httpClient:` supports a custom app-owned URLSession through the official
 `BaseHTTPClient`. No global OTel provider or active context is installed.
 

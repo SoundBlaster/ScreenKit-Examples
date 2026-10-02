@@ -92,6 +92,14 @@ when its owner is finished, outside measured UI intervals. `flush()` moves SDK
 queue work off the main actor; it is **not a server delivery receipt**, because
 the upstream metric exporter sends asynchronously. Network sessions/policies
 remain app-owned; `httpClient:` accepts the official HTTPClient abstraction.
+Shutdown explicitly collects the final metrics before stopping the periodic
+reader, so updates since its last tick are not silently omitted.
+
+For a complete consuming app, open the optional
+[Telemetry Lab](../ScreenKitLab/Telemetry). It connects the existing mixed-content
+screen, provides an OTLP switch, and saves balanced off/on comparisons with raw
+samples. Its verifier checks all expected root traces, child phases and counters
+in this workbench; a successful app run alone does not imply delivery.
 
 For a physical iPhone, loopback means the phone itself. Deliberately expose only
 OTLP on the development LAN with `OTLP_BIND_ADDRESS=0.0.0.0` when starting Compose,

@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	"classes" = {
+	};
+	"objectVersion" = "56";
+	"archiveVersion" = "1";
+	"objects" = {
+		"003EB9FCB78EE6A887AABBD0" = {
+			"buildActionMask" = "2147483647";
+			"dstSubfolderSpec" = "10";
+			"isa" = "PBXCopyFilesBuildPhase";
+			"runOnlyForDeploymentPostprocessing" = "0";
+			"dstPath" = "";
+			"files" = (
+			);
+			"name" = "Embed Frameworks";
+		};
+		"0621C96F8F521D4B9F4783BB" = {
+			"isa" = "PBXGroup";
+			"name" = "Products";
+			"children" = (
+				"BB702072976FCF4F32E3F7D4",
+				"C46331A1919215AE918D7A6C",
+			);
+			"sourceTree" = "<group>";
+		};
+		"0B9011B749C3C59AEC14AD31" = {
+			"path" = "MixedContentProbe.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"0D903E50AD1C9F078F41D21F" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"SWIFT_VERSION" = "5.0";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"TEST_TARGET_NAME" = "ScreenKitLabTelemetry";
+				"CODE_SIGN_IDENTITY" = "iPhone Developer";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "YES";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"SDKROOT" = "iphoneos";
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"PRODUCT_NAME" = "LabTelemetryUITests";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.soundblaster.screenkit.lab.telemetry.uitests";
+				"SUPPORTS_MACCATALYST" = "NO";
+			};
+			"name" = "Release";
+		};
+		"1049F5C4B3BCCDCB84D0392C" = {
+			"path" = "ContainerProbe.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"1253FFEB7A538275BA998D40" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "0B9011B749C3C59AEC14AD31";
+		};
+		"136F99117F90375FA688F66A" = {
+			"path" = "ScreenKitLabApp.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"184CCFB21A81FA4B999A326B" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"67098D5A5395B52EE73266DB",
+				"7EA10A5F1B80181F97274F7C",
+			);
+			"path" = "ScreenKitLab/Telemetry";
+			"sourceTree" = "<group>";
+		};
+		"198AC36A5B7CE60F624CA51A" = {
+			"isa" = "PBXTargetDependency";
+			"name" = "ScreenKitLab";
+			"target" = "B92E7D8EC77561F735F92E89";
+			"targetProxy" = "7B25A05DA97DFE5590D178DC";
+		};
+		"1A36CB9F98EE4FA38545B984" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "136F99117F90375FA688F66A";
+		};
+		"1CDEE3AA91FCDE28ECE4698D" = {
+			"path" = "ScreenMacroProbe.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"2D5FBC2E2DDE0CC9B31110D2" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"2D7AFC4AEC36C9756C3CAE56" = {
+			"path" = "ScreenContainerTests.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"30C8CFD1E53FB01C7399D85F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1049F5C4B3BCCDCB84D0392C";
+		};
+		"3341F75C3950AB61DFD7CC4D" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"3A1D6CD171B31C49D8DF44E2" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "$(inherited) DEBUG";
+				"SWIFT_VERSION" = "5.0";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"TEST_TARGET_NAME" = "ScreenKitLabTelemetry";
+				"CODE_SIGN_IDENTITY" = "iPhone Developer";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "YES";
+				"SWIFT_COMPILATION_MODE" = "singlefile";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"SDKROOT" = "iphoneos";
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"PRODUCT_NAME" = "LabTelemetryUITests";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.soundblaster.screenkit.lab.telemetry.uitests";
+				"SUPPORTS_MACCATALYST" = "NO";
+			};
+			"name" = "Debug";
+		};
+		"3B0BABCCF0CEDC93FA34EFE0" = {
+			"buildActionMask" = "2147483647";
+			"dstSubfolderSpec" = "10";
+			"isa" = "PBXCopyFilesBuildPhase";
+			"runOnlyForDeploymentPostprocessing" = "0";
+			"dstPath" = "";
+			"files" = (
+			);
+			"name" = "Embed Frameworks";
+		};
+		"423E5EA050FFA83F391BF23F" = {
+			"buildConfigurationList" = "D428EFE2F0B82FBDDE0BDA2F";
+			"productReference" = "C46331A1919215AE918D7A6C";
+			"productType" = "com.apple.product-type.bundle.ui-testing";
+			"packageProductDependencies" = (
+			);
+			"productName" = "LabTelemetryUITests";
+			"isa" = "PBXNativeTarget";
+			"buildPhases" = (
+				"F4B8DC001CFBFE537D40FCF3",
+				"3341F75C3950AB61DFD7CC4D",
+				"2D5FBC2E2DDE0CC9B31110D2",
+				"003EB9FCB78EE6A887AABBD0",
+			);
+			"dependencies" = (
+				"198AC36A5B7CE60F624CA51A",
+			);
+			"name" = "LabTelemetryUITests";
+			"buildRules" = (
+			);
+		};
+		"4861439C2E2616855B0E676E" = {
+			"isa" = "XCSwiftPackageProductDependency";
+			"productName" = "ScreenKit";
+		};
+		"48E648D462311865A265B84B" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ScreenKitLab/TelemetryTests/LabTelemetryUITests.swift";
+			"sourceTree" = "<group>";
+		};
+		"4A0C65890EB2E64EBD4A33BB" = {
+			"isa" = "XCLocalSwiftPackageReference";
+			"relativePath" = "Packages/ScreenKitTelemetryMonitor";
+		};
+		"5028023097478C05E3044B32" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"522866821CE8C32DF15A2446",
+				"97CD5FD8E87FA97B6C3E83BB",
+				"889843C1C302C6B0CA6291A1",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"522866821CE8C32DF15A2446" = {
+			"isa" = "PBXBuildFile";
+			"productRef" = "4861439C2E2616855B0E676E";
+		};
+		"5592BDF69E1C86AFFAF6D5E9" = {
+			"isa" = "XCSwiftPackageProductDependency";
+			"package" = "4A0C65890EB2E64EBD4A33BB";
+			"productName" = "ScreenKitTelemetryMonitor";
+		};
+		"5B3C8D29685328AA8650691F" = {
+			"path" = "Tests";
+			"isa" = "PBXGroup";
+			"children" = (
+				"2D7AFC4AEC36C9756C3CAE56",
+				"F8327C35AF850AF2338DBF84",
+			);
+			"sourceTree" = "<group>";
+		};
+		"5C7146888E0FACCFA393E54C" = {
+			"isa" = "XCRemoteSwiftPackageReference";
+			"repositoryURL" = "https://github.com/SoundBlaster/Patchwork.git";
+			"requirement" = {
+				"kind" = "exactVersion";
+				"version" = "0.1.3";
+			};
+		};
+		"5F0D147044399796015ACA60" = {
+			"path" = "UITests";
+			"isa" = "PBXGroup";
+			"children" = (
+				"93F7EDF5089AD0EA0184ED83",
+			);
+			"sourceTree" = "<group>";
+		};
+		"61C963D7E675A0D7E34EE944" = {
+			"isa" = "XCSwiftPackageProductDependency";
+			"productName" = "Patchwork";
+		};
+		"65227EEE96A6AA38497C192C" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "E480CFA20D60BB9ECDC32691";
+		};
+		"67098D5A5395B52EE73266DB" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "LabBenchmark.swift";
+			"sourceTree" = "<group>";
+		};
+		"693324C7C7EBCDEA94320376" = {
+			"isa" = "PBXGroup";
+			"sourceTree" = "<group>";
+			"children" = (
+				"FEE79620E157220D7B48B4C1",
+				"184CCFB21A81FA4B999A326B",
+				"48E648D462311865A265B84B",
+				"0621C96F8F521D4B9F4783BB",
+			);
+		};
+		"7B25A05DA97DFE5590D178DC" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "D58224C5330241B1072A75CA";
+			"remoteGlobalIDString" = "B92E7D8EC77561F735F92E89";
+			"remoteInfo" = "ScreenKitLab";
+			"proxyType" = "1";
+		};
+		"7EA10A5F1B80181F97274F7C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "LabTelemetrySession.swift";
+			"sourceTree" = "<group>";
+		};
+		"86A94E92CDCE5350EB9B71E6" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"SWIFT_COMPILATION_MODE" = "singlefile";
+				"INFOPLIST_KEY_UIObservationTrackingEnabled" = "YES";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.soundblaster.screenkit.lab.telemetry";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Lab Telemetry";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "YES";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "$(inherited) DEBUG SCREENKIT_TELEMETRY";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SDKROOT" = "iphoneos";
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SWIFT_VERSION" = "5.0";
+				"PRODUCT_NAME" = "ScreenKitLabTelemetry";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"CODE_SIGN_IDENTITY" = "iPhone Developer";
+				"ENABLE_PREVIEWS" = "YES";
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"INFOPLIST_KEY_NSLocalNetworkUsageDescription" = "Send screen performance measurements to your local OpenTelemetry Collector.";
+				"INFOPLIST_FILE" = "ScreenKitLab/Telemetry/Info.plist";
+			};
+			"name" = "Debug";
+		};
+		"889843C1C302C6B0CA6291A1" = {
+			"isa" = "PBXBuildFile";
+			"productRef" = "5592BDF69E1C86AFFAF6D5E9";
+		};
+		"8E8844736438FDBD17C4E5C2" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"CLANG_WARN_UNGUARDED_AVAILABILITY" = "YES_AGGRESSIVE";
+				"CLANG_WARN_SUSPICIOUS_MOVE" = "YES";
+				"CLANG_WARN_DIRECT_OBJC_ISA_USAGE" = "YES_ERROR";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"CLANG_ENABLE_OBJC_WEAK" = "YES";
+				"CLANG_WARN__DUPLICATE_METHOD_MATCH" = "YES";
+				"CLANG_CXX_LIBRARY" = "libc++";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"CLANG_WARN_INFINITE_RECURSION" = "YES";
+				"GCC_WARN_UNDECLARED_SELECTOR" = "YES";
+				"DEAD_CODE_STRIPPING" = "YES";
+				"CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION" = "YES_AGGRESSIVE";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "gnu++14";
+				"ENABLE_TESTABILITY" = "YES";
+				"CLANG_WARN_BOOL_CONVERSION" = "YES";
+				"CLANG_WARN_UNREACHABLE_CODE" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"CLANG_ANALYZER_NONNULL" = "YES";
+				"CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING" = "YES";
+				"CLANG_WARN_STRICT_PROTOTYPES" = "YES";
+				"CLANG_WARN_ENUM_CONVERSION" = "YES";
+				"CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" = "YES";
+				"GCC_PREPROCESSOR_DEFINITIONS" = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				"GCC_WARN_64_TO_32_BIT_CONVERSION" = "YES";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CLANG_WARN_EMPTY_BODY" = "YES";
+				"GCC_WARN_UNINITIALIZED_AUTOS" = "YES_AGGRESSIVE";
+				"GCC_WARN_ABOUT_RETURN_TYPE" = "YES_ERROR";
+				"CLANG_WARN_COMMA" = "YES";
+				"GCC_DYNAMIC_NO_PIC" = "NO";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu11";
+				"GCC_WARN_UNUSED_VARIABLE" = "YES";
+				"CLANG_WARN_RANGE_LOOP_ANALYSIS" = "YES";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_WARN_INT_CONVERSION" = "YES";
+				"ALWAYS_SEARCH_USER_PATHS" = "NO";
+				"CLANG_WARN_OBJC_ROOT_CLASS" = "YES_ERROR";
+				"CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS" = "YES";
+				"COPY_PHASE_STRIP" = "NO";
+				"CLANG_WARN_CONSTANT_CONVERSION" = "YES";
+				"GCC_NO_COMMON_BLOCKS" = "YES";
+				"GCC_OPTIMIZATION_LEVEL" = "0";
+				"MTL_ENABLE_DEBUG_INFO" = "YES";
+				"ONLY_ACTIVE_ARCH" = "YES";
+				"CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED" = "YES";
+				"CLANG_WARN_NON_LITERAL_NULL_CONVERSION" = "YES";
+				"GCC_WARN_UNUSED_FUNCTION" = "YES";
+				"CLANG_WARN_OBJC_LITERAL_CONVERSION" = "YES";
+				"CLANG_WARN_DOCUMENTATION_COMMENTS" = "YES";
+				"CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"90C5B3B9027D65F66F4514E5" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"30C8CFD1E53FB01C7399D85F",
+				"65227EEE96A6AA38497C192C",
+				"1253FFEB7A538275BA998D40",
+				"1A36CB9F98EE4FA38545B984",
+				"A9118720852241CDD4328127",
+				"EDD207546CA284E6333E4A5C",
+				"EAD652AF8BCD0C59BCEA41C1",
+				"C825B4D2987468B5576B940A",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"93F7EDF5089AD0EA0184ED83" = {
+			"path" = "ScreenKitLabUITests.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"97CD5FD8E87FA97B6C3E83BB" = {
+			"isa" = "PBXBuildFile";
+			"productRef" = "61C963D7E675A0D7E34EE944";
+		};
+		"9964AEE537B2321DBC6F9FA2" = {
+			"path" = "SectionedContentProbe.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"A9118720852241CDD4328127" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1CDEE3AA91FCDE28ECE4698D";
+		};
+		"AC5D6D8CE7352C742D64E706" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"CLANG_WARN_UNGUARDED_AVAILABILITY" = "YES_AGGRESSIVE";
+				"CLANG_WARN_SUSPICIOUS_MOVE" = "YES";
+				"CLANG_WARN_DIRECT_OBJC_ISA_USAGE" = "YES_ERROR";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"CLANG_ENABLE_OBJC_WEAK" = "YES";
+				"CLANG_WARN__DUPLICATE_METHOD_MATCH" = "YES";
+				"CLANG_CXX_LIBRARY" = "libc++";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"CLANG_WARN_INFINITE_RECURSION" = "YES";
+				"ENABLE_NS_ASSERTIONS" = "NO";
+				"DEAD_CODE_STRIPPING" = "YES";
+				"GCC_WARN_UNDECLARED_SELECTOR" = "YES";
+				"CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION" = "YES_AGGRESSIVE";
+				"CLANG_CXX_LANGUAGE_STANDARD" = "gnu++14";
+				"CLANG_WARN_BOOL_CONVERSION" = "YES";
+				"CLANG_WARN_UNREACHABLE_CODE" = "YES";
+				"ENABLE_STRICT_OBJC_MSGSEND" = "YES";
+				"CLANG_ANALYZER_NONNULL" = "YES";
+				"CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING" = "YES";
+				"CLANG_WARN_STRICT_PROTOTYPES" = "YES";
+				"CLANG_WARN_ENUM_CONVERSION" = "YES";
+				"CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER" = "YES";
+				"GCC_WARN_64_TO_32_BIT_CONVERSION" = "YES";
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"CLANG_WARN_EMPTY_BODY" = "YES";
+				"GCC_WARN_UNINITIALIZED_AUTOS" = "YES_AGGRESSIVE";
+				"GCC_WARN_ABOUT_RETURN_TYPE" = "YES_ERROR";
+				"CLANG_WARN_COMMA" = "YES";
+				"GCC_C_LANGUAGE_STANDARD" = "gnu11";
+				"GCC_WARN_UNUSED_VARIABLE" = "YES";
+				"CLANG_WARN_RANGE_LOOP_ANALYSIS" = "YES";
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_WARN_INT_CONVERSION" = "YES";
+				"ALWAYS_SEARCH_USER_PATHS" = "NO";
+				"CLANG_WARN_OBJC_ROOT_CLASS" = "YES_ERROR";
+				"CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS" = "YES";
+				"COPY_PHASE_STRIP" = "NO";
+				"CLANG_WARN_CONSTANT_CONVERSION" = "YES";
+				"GCC_NO_COMMON_BLOCKS" = "YES";
+				"MTL_ENABLE_DEBUG_INFO" = "NO";
+				"CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED" = "YES";
+				"CLANG_WARN_NON_LITERAL_NULL_CONVERSION" = "YES";
+				"VALIDATE_PRODUCT" = "YES";
+				"GCC_WARN_UNUSED_FUNCTION" = "YES";
+				"CLANG_WARN_OBJC_LITERAL_CONVERSION" = "YES";
+				"CLANG_WARN_DOCUMENTATION_COMMENTS" = "YES";
+				"CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF" = "YES";
+			};
+			"name" = "Release";
+		};
+		"B92E7D8EC77561F735F92E89" = {
+			"buildConfigurationList" = "C9C42B5648CDDD7B51399A9C";
+			"productReference" = "BB702072976FCF4F32E3F7D4";
+			"productType" = "com.apple.product-type.application";
+			"packageProductDependencies" = (
+				"4861439C2E2616855B0E676E",
+				"61C963D7E675A0D7E34EE944",
+				"5592BDF69E1C86AFFAF6D5E9",
+			);
+			"productName" = "ScreenKitLabTelemetry";
+			"isa" = "PBXNativeTarget";
+			"buildPhases" = (
+				"90C5B3B9027D65F66F4514E5",
+				"E401DC80F0BFF61E5CB42B40",
+				"5028023097478C05E3044B32",
+				"3B0BABCCF0CEDC93FA34EFE0",
+			);
+			"dependencies" = (
+			);
+			"name" = "ScreenKitLabTelemetry";
+			"buildRules" = (
+			);
+		};
+		"BB702072976FCF4F32E3F7D4" = {
+			"path" = "ScreenKitLabTelemetry.app";
+			"isa" = "PBXFileReference";
+			"includeInIndex" = "0";
+			"explicitFileType" = "wrapper.application";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"C2F8F7A11FCF5114CDEC131E" = {
+			"isa" = "XCRemoteSwiftPackageReference";
+			"repositoryURL" = "https://github.com/SoundBlaster/ScreenKit.git";
+			"requirement" = {
+				"kind" = "revision";
+				"revision" = "8811665c7d860efc2a11c8709a21fe39232b4e07";
+			};
+		};
+		"C46331A1919215AE918D7A6C" = {
+			"path" = "LabTelemetryUITests.xctest";
+			"isa" = "PBXFileReference";
+			"includeInIndex" = "0";
+			"explicitFileType" = "wrapper.cfbundle";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"C825B4D2987468B5576B940A" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7EA10A5F1B80181F97274F7C";
+		};
+		"C9C42B5648CDDD7B51399A9C" = {
+			"isa" = "XCConfigurationList";
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+			"buildConfigurations" = (
+				"86A94E92CDCE5350EB9B71E6",
+				"FBD1D208ACC4543CC798BFA0",
+			);
+		};
+		"D428EFE2F0B82FBDDE0BDA2F" = {
+			"isa" = "XCConfigurationList";
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+			"buildConfigurations" = (
+				"3A1D6CD171B31C49D8DF44E2",
+				"0D903E50AD1C9F078F41D21F",
+			);
+		};
+		"D58224C5330241B1072A75CA" = {
+			"buildConfigurationList" = "F249F4D551C3BEB99EE3AF99";
+			"packageReferences" = (
+				"5C7146888E0FACCFA393E54C",
+				"C2F8F7A11FCF5114CDEC131E",
+				"4A0C65890EB2E64EBD4A33BB",
+			);
+			"targets" = (
+				"B92E7D8EC77561F735F92E89",
+				"423E5EA050FFA83F391BF23F",
+			);
+			"developmentRegion" = "en";
+			"knownRegions" = (
+				"Base",
+				"en",
+			);
+			"isa" = "PBXProject";
+			"compatibilityVersion" = "Xcode 14.0";
+			"productRefGroup" = "0621C96F8F521D4B9F4783BB";
+			"projectDirPath" = "";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"TargetAttributes" = {
+					"423E5EA050FFA83F391BF23F" = {
+						"TestTargetID" = "B92E7D8EC77561F735F92E89";
+					};
+				};
+			};
+			"hasScannedForEncodings" = "0";
+			"projectRoot" = "";
+			"mainGroup" = "693324C7C7EBCDEA94320376";
+		};
+		"D96A2913D62899F17E4DCE8A" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "48E648D462311865A265B84B";
+		};
+		"E401DC80F0BFF61E5CB42B40" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"E480CFA20D60BB9ECDC32691" = {
+			"path" = "LegacyContentProbe.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"EAD652AF8BCD0C59BCEA41C1" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "67098D5A5395B52EE73266DB";
+		};
+		"EDD207546CA284E6333E4A5C" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "9964AEE537B2321DBC6F9FA2";
+		};
+		"F12751E4858E83DCD097B727" = {
+			"path" = "Sources";
+			"isa" = "PBXGroup";
+			"children" = (
+				"1049F5C4B3BCCDCB84D0392C",
+				"E480CFA20D60BB9ECDC32691",
+				"0B9011B749C3C59AEC14AD31",
+				"136F99117F90375FA688F66A",
+				"1CDEE3AA91FCDE28ECE4698D",
+				"9964AEE537B2321DBC6F9FA2",
+			);
+			"sourceTree" = "<group>";
+		};
+		"F249F4D551C3BEB99EE3AF99" = {
+			"isa" = "XCConfigurationList";
+			"defaultConfigurationIsVisible" = "0";
+			"defaultConfigurationName" = "Release";
+			"buildConfigurations" = (
+				"8E8844736438FDBD17C4E5C2",
+				"AC5D6D8CE7352C742D64E706",
+			);
+		};
+		"F4B8DC001CFBFE537D40FCF3" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = "2147483647";
+			"files" = (
+				"D96A2913D62899F17E4DCE8A",
+			);
+			"runOnlyForDeploymentPostprocessing" = "0";
+		};
+		"F8327C35AF850AF2338DBF84" = {
+			"path" = "ScreenKitLabTests.swift";
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"sourceTree" = "<group>";
+		};
+		"FBD1D208ACC4543CC798BFA0" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"LD_RUNPATH_SEARCH_PATHS" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"SWIFT_VERSION" = "5.0";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"INFOPLIST_KEY_UIObservationTrackingEnabled" = "YES";
+				"CODE_SIGN_IDENTITY" = "iPhone Developer";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"ENABLE_PREVIEWS" = "YES";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "YES";
+				"INFOPLIST_KEY_CFBundleDisplayName" = "Lab Telemetry";
+				"ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME" = "AccentColor";
+				"SWIFT_COMPILATION_MODE" = "wholemodule";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"PRODUCT_NAME" = "ScreenKitLabTelemetry";
+				"SDKROOT" = "iphoneos";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "18.0";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "com.soundblaster.screenkit.lab.telemetry";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "$(inherited) SCREENKIT_TELEMETRY";
+				"INFOPLIST_KEY_NSLocalNetworkUsageDescription" = "Send screen performance measurements to your local OpenTelemetry Collector.";
+				"INFOPLIST_FILE" = "ScreenKitLab/Telemetry/Info.plist";
+			};
+			"name" = "Release";
+		};
+		"FEE79620E157220D7B48B4C1" = {
+			"path" = "ScreenKitLab";
+			"isa" = "PBXGroup";
+			"children" = (
+				"F12751E4858E83DCD097B727",
+				"5B3C8D29685328AA8650691F",
+				"5F0D147044399796015ACA60",
+			);
+			"sourceTree" = "<group>";
+		};
+	};
+	"rootObject" = "D58224C5330241B1072A75CA";
+}

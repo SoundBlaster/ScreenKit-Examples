@@ -20,6 +20,22 @@ final class CapturingClient: HTTPClient, @unchecked Sendable {
 
 final class MonitorTests: XCTestCase {
     @MainActor
+    func testShutdownExportsUpdatesBeforeTheFirstPeriodicTick() async throws {
+        let client = CapturingClient()
+        let monitor = ScreenTelemetryMonitor(endpoint: URL(string: "http://127.0.0.1:4318")!, serviceName: "shutdown", interval: 3600, httpClient: client)
+        let interval = ScreenTelemetryInterval(updateID: UUID(), screenID: UUID(), screenName: "catalog", kind: .sections, phase: .update, animated: false, start: .now())
+        monitor.adapter.record(.began(interval))
+        monitor.adapter.record(.ended(interval, at: .now(), outcome: .completed, counts: .init()))
+        XCTAssertTrue(client.requests.isEmpty)
+        // No explicit flush: a short-lived screen must not lose its last metrics.
+        await monitor.shutdown()
+        XCTAssertEqual(Set(client.requests.compactMap { $0.url?.path }), ["/v1/traces", "/v1/metrics"])
+        let requestCount = client.requests.count
+        await monitor.shutdown()
+        XCTAssertEqual(client.requests.count, requestCount)
+    }
+
+    @MainActor
     func testOfficialExportersUseSignalPathsAndProtobufOffTheCallback() async throws {
         let client = CapturingClient()
         let monitor = ScreenTelemetryMonitor(endpoint: URL(string: "http://127.0.0.1:4318")!, serviceName: "test", interval: 3600, httpClient: client)

@@ -67,7 +67,8 @@ public final class ScreenTelemetryMonitor {
         await workers.flush()
     }
 
-    /// Stops the SDK workers off the main actor. Call outside measured intervals.
+    /// Collects the last metrics and stops SDK workers off the main actor.
+    /// Call outside measured intervals. Like `flush()`, this is not a server receipt.
     public func shutdown() async {
         guard !stopped else { return }
         stopped = true
@@ -103,6 +104,9 @@ private final class SDKExportWorkers: @unchecked Sendable {
     func shutdown() async {
         await withCheckedContinuation { continuation in
             queue.async { [self] in
+                // PeriodicMetricReaderSdk.shutdown() cancels its timer without
+                // collecting. Otherwise updates since its last tick disappear.
+                _ = reader.forceFlush()
                 processor.shutdown(explicitTimeout: 10)
                 _ = reader.shutdown()
                 continuation.resume()
