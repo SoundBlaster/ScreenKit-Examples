@@ -18,6 +18,15 @@ A small price-comparison app demonstrating a complete ScreenKit + Patchwork flow
 editable UIKit rows, SwiftUI content, configuration-based rows, onboarding pages,
 navigation, and saved comparison history.
 
+## Telemetry prototype
+
+The independent [ScreenKitOpenTelemetry prototype](Packages/ScreenKitOpenTelemetry)
+demonstrates shared signpost/OTel update boundaries, explicit trace parentage,
+seconds histograms, sampling-independent metrics, and an instrumentation overhead
+smoke report. It uses the corresponding ScreenKit development PR; both apps
+continue to consume their released package pins. See its README for build and
+measurement limits.
+
 ## Requirements
 
 - Xcode 27 or later with the Swift 6.2 toolchain

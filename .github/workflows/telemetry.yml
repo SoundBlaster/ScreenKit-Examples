@@ -1,0 +1,58 @@
+name: Telemetry prototype
+
+on:
+  push:
+    branches: [main]
+    paths: ['Packages/ScreenKitOpenTelemetry/**', '.github/workflows/telemetry.yml']
+  pull_request:
+    paths: ['Packages/ScreenKitOpenTelemetry/**', '.github/workflows/telemetry.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: telemetry-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  telemetry:
+    name: Telemetry contract and consumer
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+    defaults:
+      run:
+        working-directory: Packages/ScreenKitOpenTelemetry
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Unit tests
+        run: swift test -j 2
+      - name: Record measurement inputs
+        run: |
+          mkdir -p "$RUNNER_TEMP/ScreenKitTelemetry-inputs"
+          git rev-parse HEAD > "$RUNNER_TEMP/ScreenKitTelemetry-inputs/commit.txt"
+          xcodebuild -version > "$RUNNER_TEMP/ScreenKitTelemetry-inputs/xcode.txt"
+          xcrun --sdk iphonesimulator --show-sdk-version > "$RUNNER_TEMP/ScreenKitTelemetry-inputs/sdk.txt"
+          cp Package.resolved "$RUNNER_TEMP/ScreenKitTelemetry-inputs/Package.resolved"
+      - name: Release consumer and overhead smoke test
+        run: |
+          xcodebuild -quiet -scheme ScreenKitOpenTelemetry -configuration Release \
+            -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0' \
+            -skipMacroValidation -parallel-testing-enabled NO \
+            -test-timeouts-enabled YES -maximum-test-execution-time-allowance 120 \
+            -resultBundlePath "$RUNNER_TEMP/ScreenKitTelemetry.xcresult" test
+      - name: Upload telemetry test results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenkit-telemetry-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ScreenKitTelemetry.xcresult
+            ${{ runner.temp }}/ScreenKitTelemetry-inputs
+          retention-days: 14
+          if-no-files-found: warn

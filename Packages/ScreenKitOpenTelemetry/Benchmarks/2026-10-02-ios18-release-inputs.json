@@ -1,0 +1,41 @@
+{
+  "screenKitRevision": "8811665c7d860efc2a11c8709a21fe39232b4e07",
+  "controllerHarnessSHA256": "38ff25949ff3b387a95995aedfc48610ad24d00504cde64f6bf881b71f64d308",
+  "xcode": "Xcode 27.1\nBuild version 27A9269",
+  "sdk": "27.1",
+  "device": "iPhone 16 Pro simulator; 54D82B9B-C57F-461F-9CB8-27E3C9B2CE67",
+  "packagePins": [
+    {
+      "identity": "opentelemetry-swift-core",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/open-telemetry/opentelemetry-swift-core.git",
+      "state": {
+        "revision": "06f8a460a66f813758d22f09025d85df45450a63",
+        "version": "2.5.1"
+      }
+    },
+    {
+      "identity": "swift-atomics",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/apple/swift-atomics.git",
+      "state": {
+        "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+        "version": "1.3.1"
+      }
+    },
+    {
+      "identity": "swift-syntax",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/swiftlang/swift-syntax.git",
+      "state": {
+        "revision": "4799286537280063c85a32f09884cfbca301b1a1",
+        "version": "602.0.0"
+      }
+    }
+  ],
+  "configuration": "Release; ONLY_ACTIVE_ARCH=YES; animations disabled",
+  "exporter": "SimpleSpanProcessor with in-memory collector; no network; forceFlush outside measured interval",
+  "environmentNote": "Shared development host; core verification compiling concurrently. Fixed mode order; not a device performance budget.",
+  "result": "7 tests passed; 0 failures/skips",
+  "resultBundle": "ScreenKit-OTel-iOS18-final-20261002.xcresult"
+}
