@@ -1,0 +1,1080 @@
+{
+  "blocks" : [
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 0,
+      "invalidEvents" : 0,
+      "mode" : "disabled",
+      "pair" : 0,
+      "position" : 0,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.01581325,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.01471525,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.020201292,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.020130875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.020341834,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.017910792,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.019001542,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.013938042,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.012160584,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.011916708,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.012637792,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.012212625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.01887375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.013470708,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.0169225,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.015017209,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.018316083,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.018651292,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.019828333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.020562458,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 24,
+      "instanceID" : "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576-0-1",
+      "invalidEvents" : 0,
+      "mode" : "otlp",
+      "pair" : 0,
+      "position" : 1,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.019711333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.018350666,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.0188985,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.022381625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.020725708,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.020685167,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.019751208,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.019440167,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.020895125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.020205291,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.019919417,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.020037667,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.020061375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.016015375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.014187125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.013805791,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.012924166,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.015290125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.019104875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.0183955,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 24,
+      "instanceID" : "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576-1-0",
+      "invalidEvents" : 0,
+      "mode" : "otlp",
+      "pair" : 1,
+      "position" : 0,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.018892834,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.019047459,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.0178575,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.018807666,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.020700667,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.018817333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.020214125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.018904167,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.019785791,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.019662542,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.0201655,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.018811167,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.013059959,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.017644375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.021411166,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.020393416,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.019516375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.019752834,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.020444375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.019274,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 0,
+      "invalidEvents" : 0,
+      "mode" : "disabled",
+      "pair" : 1,
+      "position" : 1,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.016144625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.016592042,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.014929833,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.015654584,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.013358875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.015310167,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.015133666,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.015472542,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.015512917,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.015452042,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.015955625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.01700925,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.019087875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.015338792,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.016024791,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.015563708,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.013927833,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.01576525,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.014963166,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.015499875,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 0,
+      "invalidEvents" : 0,
+      "mode" : "disabled",
+      "pair" : 2,
+      "position" : 0,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.017578584,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.016378333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.019320333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.019505709,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.016311042,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.016028958,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.023280541,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.021455084,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.019910417,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.019738125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.020279,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.019684459,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.019188084,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.018914958,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.019697291,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.019492833,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.019412208,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.019289583,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.0202815,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.019531584,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 24,
+      "instanceID" : "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576-2-1",
+      "invalidEvents" : 0,
+      "mode" : "otlp",
+      "pair" : 2,
+      "position" : 1,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.020463125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.019369208,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.019335,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.020322834,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.020279417,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.018366458,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.019652833,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.020039417,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.020116834,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.019827584,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.020567542,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.020258084,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.018454084,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.01541,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.014144667,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.013015,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.015692917,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.016876375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.019769375,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.019517458,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 24,
+      "instanceID" : "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576-3-0",
+      "invalidEvents" : 0,
+      "mode" : "otlp",
+      "pair" : 3,
+      "position" : 0,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.021499959,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.020154666,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.01998825,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.01918825,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.018046,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.023207,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.021301666,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.02059675,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.0207785,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.014708958,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.0140465,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.014282084,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.015030333,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.015310083,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.018656334,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.018971208,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.019227584,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.020001875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.021496417,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.021993583,
+          "thermalState" : 0
+        }
+      ]
+    },
+    {
+      "activeSpans" : 0,
+      "contentVerified" : true,
+      "expectedUpdates" : 0,
+      "invalidEvents" : 0,
+      "mode" : "disabled",
+      "pair" : 3,
+      "position" : 1,
+      "samples" : [
+        {
+          "appActive" : true,
+          "iteration" : 1,
+          "seconds" : 0.019953,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 2,
+          "seconds" : 0.01901125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 3,
+          "seconds" : 0.019886458,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 4,
+          "seconds" : 0.020447792,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 5,
+          "seconds" : 0.021746875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 6,
+          "seconds" : 0.021120541,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 7,
+          "seconds" : 0.01945625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 8,
+          "seconds" : 0.020444875,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 9,
+          "seconds" : 0.019939792,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 10,
+          "seconds" : 0.019981125,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 11,
+          "seconds" : 0.020167917,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 12,
+          "seconds" : 0.021352042,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 13,
+          "seconds" : 0.020727083,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 14,
+          "seconds" : 0.0215845,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 15,
+          "seconds" : 0.017345917,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 16,
+          "seconds" : 0.013569625,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 17,
+          "seconds" : 0.0150955,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 18,
+          "seconds" : 0.013742958,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 19,
+          "seconds" : 0.01602275,
+          "thermalState" : 0
+        },
+        {
+          "appActive" : true,
+          "iteration" : 20,
+          "seconds" : 0.017573666,
+          "thermalState" : 0
+        }
+      ]
+    }
+  ],
+  "configuration" : "Release",
+  "contentSizeCategory" : "UICTContentSizeCategoryL",
+  "device" : "iPhone19,2",
+  "displayScale" : 3,
+  "endpoint" : "http:\/\/127.0.0.1:4318",
+  "errors" : [
+
+  ],
+  "exportIntervalSeconds" : 0.25,
+  "finishedAt" : "2026-10-02T23:08:44Z",
+  "itemCount" : 1000,
+  "lowPowerMode" : false,
+  "operatingSystem" : "Version 27.0 (Build 24A434)",
+  "pacingSeconds" : 0.05,
+  "patchworkVersion" : "0.1.3",
+  "runID" : "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576",
+  "samplesPerBlock" : 20,
+  "schema" : 1,
+  "screenKitRevision" : "8811665c7d860efc2a11c8709a21fe39232b4e07",
+  "simulator" : true,
+  "startedAt" : "2026-10-02T23:08:30Z",
+  "viewportHeight" : 874,
+  "viewportWidth" : 402,
+  "warmups" : 3
+}

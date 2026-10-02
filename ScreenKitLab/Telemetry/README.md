@@ -95,3 +95,6 @@ from noisy ratios below one. SDK shutdown alone is not a delivery receipt.
 CI builds the telemetry app in Release and exercises the original screen and
 endpoint validation on iOS 27. The local backend comparison is a separate gate;
 the CI UI job does not require Docker or claim network-delivery evidence.
+
+See [verification results](VERIFICATION.md) for the iOS 18/27 raw reports,
+backend receipts, build provenance and the remaining physical-device gate.
