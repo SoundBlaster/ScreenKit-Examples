@@ -20,11 +20,12 @@ public final class ScreenTelemetryMonitor {
 
     /// `endpoint` is the Collector base URL, e.g. `http://127.0.0.1:4318`.
     /// `source` distinguishes app measurements from synthetic/test events.
+    /// `compressExports` controls OTLP HTTP request compression.
     /// `httpClient` allows the app to supply its URLSession or test transport.
     public init(
         endpoint: URL, serviceName: String, source: String = "app",
         instanceID: String = UUID().uuidString,
-        interval: TimeInterval = 2, sampled: Bool = true,
+        interval: TimeInterval = 2, sampled: Bool = true, compressExports: Bool = true,
         httpClient: any HTTPClient = BaseHTTPClient()
     ) {
         precondition(interval.isFinite && interval > 0, "Export interval must be positive and finite")
@@ -33,8 +34,8 @@ public final class ScreenTelemetryMonitor {
             "service.name": .string(serviceName), "service.instance.id": .string(instanceID),
             "screenkit.telemetry.source": .string(source)
         ])
-        let traceExporter = OtlpHttpTraceExporter(endpoint: endpoint.appendingPathComponent("v1/traces"), httpClient: httpClient, envVarHeaders: [])
-        let metricExporter = OtlpHttpMetricExporter(endpoint: endpoint.appendingPathComponent("v1/metrics"), httpClient: httpClient, envVarHeaders: [])
+        let traceExporter = OtlpHttpTraceExporter(endpoint: endpoint.appendingPathComponent("v1/traces"), config: .init(compression: compressExports ? .gzip : .none), httpClient: httpClient, envVarHeaders: [])
+        let metricExporter = OtlpHttpMetricExporter(endpoint: endpoint.appendingPathComponent("v1/metrics"), config: .init(compression: compressExports ? .gzip : .none), httpClient: httpClient, envVarHeaders: [])
         let processor = BatchSpanProcessor(spanExporter: traceExporter, scheduleDelay: interval, maxQueueSize: 512, maxExportBatchSize: 128)
         tracerProvider = TracerProviderBuilder().with(resource: resource)
             .with(sampler: sampled ? Samplers.alwaysOn : Samplers.alwaysOff)

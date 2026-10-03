@@ -21,6 +21,10 @@ Shutdown collects metrics once more before stopping the periodic reader; neither
 shutdown nor flush confirms server receipt. Verify ingestion separately.
 `httpClient:` supports a custom app-owned URLSession through the official
 `BaseHTTPClient`. No global OTel provider or active context is installed.
+OTLP HTTP requests use gzip compression by default; set `compressExports: false`
+when a custom test receiver needs to inspect the protobuf payload directly.
+`swift test` decodes an exported metrics request and compares its stable schema
+and measurements against `Tests/ScreenKitTelemetryMonitorTests/Fixtures`.
 
 ```sh
 swift test -j 2

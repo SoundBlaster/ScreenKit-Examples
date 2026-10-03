@@ -1,0 +1,63 @@
+{
+  "resource": {
+    "service.name": "screenkit-fixture-test",
+    "screenkit.telemetry.source": "fixture"
+  },
+  "scope": "com.soundblaster.ScreenKitOpenTelemetry",
+  "metrics": [
+    {
+      "name": "screenkit.update.count",
+      "unit": "{update}",
+      "type": "sum",
+      "value": 1,
+      "attributes": {
+        "app.screen.name": "fixture-catalog",
+        "screenkit.update.animated": "false",
+        "screenkit.update.kind": "sections",
+        "screenkit.update.outcome": "completed",
+        "screenkit.telemetry.schema.version": "1"
+      }
+    },
+    {
+      "name": "screenkit.update.phase.duration",
+      "unit": "s",
+      "type": "histogram",
+      "count": 1,
+      "attributes": {
+        "app.screen.name": "fixture-catalog",
+        "screenkit.update.animated": "false",
+        "screenkit.phase": "snapshotPrepare",
+        "screenkit.update.kind": "sections",
+        "screenkit.update.outcome": "completed",
+        "screenkit.telemetry.schema.version": "1"
+      }
+    },
+    {
+      "name": "screenkit.update.settled.duration",
+      "unit": "s",
+      "type": "histogram",
+      "count": 1,
+      "attributes": {
+        "app.screen.name": "fixture-catalog",
+        "screenkit.update.animated": "false",
+        "screenkit.update.kind": "sections",
+        "screenkit.update.outcome": "completed",
+        "screenkit.telemetry.schema.version": "1"
+      }
+    },
+    {
+      "name": "screenkit.work.count",
+      "unit": "{operation}",
+      "type": "sum",
+      "value": 2,
+      "attributes": {
+        "app.screen.name": "fixture-catalog",
+        "screenkit.update.animated": "false",
+        "screenkit.update.kind": "sections",
+        "screenkit.update.outcome": "completed",
+        "screenkit.telemetry.schema.version": "1",
+        "screenkit.work": "reconfigure_item"
+      }
+    }
+  ]
+}

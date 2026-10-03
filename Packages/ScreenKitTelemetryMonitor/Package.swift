@@ -30,6 +30,6 @@ let package = Package(
         ]),
         .testTarget(name: "ScreenKitTelemetryMonitorTests", dependencies: [
             "ScreenKitTelemetryMonitor", .product(name: "ScreenKit", package: "ScreenKit")
-        ])
+        ], resources: [.copy("Fixtures")])
     ]
 )
