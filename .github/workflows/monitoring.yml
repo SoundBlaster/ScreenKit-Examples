@@ -3,9 +3,9 @@ name: Monitoring workbench
 on:
   push:
     branches: [main]
-    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', '.github/workflows/monitoring.yml']
+    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', 'ScreenKitLab/**', 'ScreenKitLabTelemetry.xcodeproj/**', '.github/workflows/monitoring.yml']
   pull_request:
-    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', '.github/workflows/monitoring.yml']
+    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', 'ScreenKitLab/**', 'ScreenKitLabTelemetry.xcodeproj/**', '.github/workflows/monitoring.yml']
   workflow_dispatch:
 
 permissions:
@@ -16,6 +16,35 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  lab:
+    name: Telemetry Lab (Release UI)
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Test the real Lab screen and endpoint diagnostics
+        run: |
+          xcodebuild -quiet -project ScreenKitLabTelemetry.xcodeproj \
+            -scheme ScreenKitLabTelemetry -configuration Release \
+            -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0' \
+            -skipMacroValidation -parallel-testing-enabled NO ONLY_ACTIVE_ARCH=YES \
+            -test-timeouts-enabled YES -maximum-test-execution-time-allowance 120 \
+            -resultBundlePath "$RUNNER_TEMP/ScreenKitLabTelemetry.xcresult" test
+      - name: Upload Lab UI evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenkit-monitor-lab-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ScreenKitLabTelemetry.xcresult
+            ScreenKitLabTelemetry.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+          retention-days: 14
+
   client:
     name: Official OTLP exporter and UIKit consumer
     runs-on: xcode-27

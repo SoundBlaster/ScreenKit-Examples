@@ -34,6 +34,13 @@ with `docker compose -f Monitoring/compose.yml up -d`; the optional
 official Swift OTLP/HTTP exporters. A labeled synthetic producer previews the
 board, while UIKit consumer tests validate the screen update integration.
 
+[Telemetry Lab](ScreenKitLab/Telemetry) connects the **real mixed-content Lab
+screen** to that board. Open `ScreenKitLabTelemetry.xcodeproj` for the optional
+development configuration, toggle OTLP, or run its balanced comparison of
+telemetry disabled/enabled. It exports raw JSON samples and verifies actual
+Prometheus/Tempo receipt. The original `ScreenKitExamples.xcodeproj` keeps its
+released dependencies; neither app requires the telemetry SDK.
+
 ## Requirements
 
 - Xcode 27 or later with the Swift 6.2 toolchain

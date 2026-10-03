@@ -79,9 +79,12 @@ enum MixedContentProbe {
         }
     }
 
-    static func makeScreen() -> ScreenViewController<Int, ProbeRow> {
+    static func makeScreen(
+        forceExplicitUpdates: Bool = false,
+        configure: (Screen<Int, ProbeRow>) -> Screen<Int, ProbeRow> = { $0 }
+    ) -> ScreenViewController<Int, ProbeRow> {
         let store = ProbeStore()
-        let controller = Screen(store.rows, renderer: makeRenderers())
+        let screen = Screen(store.rows, renderer: makeRenderers())
         .title { "Mixed · \(store.revision)" }
         .layout { environment in
             if store.grid {
@@ -102,21 +105,21 @@ enum MixedContentProbe {
             }
             return .list(using: .init(appearance: .insetGrouped), layoutEnvironment: environment)
         }
-        .makeViewController()
+        let controller = configure(screen).makeViewController()
 
         let explicitUpdates: Bool
         if #available(iOS 26.0, *) {
-            explicitUpdates = ProcessInfo.processInfo.arguments.contains("--explicit-updates")
+            explicitUpdates = forceExplicitUpdates || ProcessInfo.processInfo.arguments.contains("--explicit-updates")
         } else {
             explicitUpdates = true
         }
         controller.navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(title: "Update", primaryAction: UIAction { [weak controller] _ in
+            UIBarButtonItem(title: "Update", primaryAction: UIAction(title: "Update") { [weak controller] _ in
                 store.update()
                 // Exercise explicit refresh alongside native tracking; unit tests use plain models.
                 if explicitUpdates { controller?.refreshContent() }
             }),
-            UIBarButtonItem(title: "Layout", primaryAction: UIAction { [weak controller] _ in
+            UIBarButtonItem(title: "Layout", primaryAction: UIAction(title: "Layout") { [weak controller] _ in
                 controller?.view.endEditing(true)
                 store.grid.toggle()
                 if #available(iOS 27, *), !explicitUpdates { return }

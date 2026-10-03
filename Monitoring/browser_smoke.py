@@ -2,6 +2,7 @@
 import argparse
 import json
 import re
+import urllib.parse
 from pathlib import Path
 from playwright.sync_api import expect, sync_playwright
 
@@ -9,15 +10,19 @@ from playwright.sync_api import expect, sync_playwright
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=Path("/tmp/screenkit-monitor-browser"))
+    parser.add_argument("--service", help="Optional dashboard service filter, e.g. screenkit-lab-benchmark")
+    parser.add_argument("--source", choices=["app", "ui-test", "synthetic"])
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     messages = []
+    filters = {"var-" + key: value for key, value in (("service", args.service), ("source", args.source)) if value}
+    dashboard_url = "http://127.0.0.1:3000/d/screenkit-ui?" + urllib.parse.urlencode(filters)
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch()
         page = browser.new_page(viewport={"width": 1440, "height": 1600}, device_scale_factor=1)
         page.on("pageerror", lambda error: messages.append(str(error)))
         try:
-            page.goto("http://127.0.0.1:3000/d/screenkit-ui", wait_until="domcontentloaded")
+            page.goto(dashboard_url, wait_until="domcontentloaded")
             expect(page.get_by_text("Completed updates · active counters", exact=True)).to_be_visible(timeout=60000)
             completed = page.get_by_role("region", name="Completed updates · active counters", exact=True)
             expect(completed.get_by_text(re.compile(r"^[1-9][0-9]*(?:[.,][0-9]+)?\s*[kKMGT]?$"), exact=True).first).to_be_visible(timeout=60000)
@@ -34,7 +39,7 @@ def main():
             expect(page.get_by_text("screenkit.layout", exact=False).first).to_be_visible()
             page.screenshot(path=str(args.output/"trace-waterfall.png"), full_page=True)
             page.set_viewport_size({"width":390, "height":844})
-            page.goto("http://127.0.0.1:3000/d/screenkit-ui", wait_until="domcontentloaded")
+            page.goto(dashboard_url, wait_until="domcontentloaded")
             expect(page.get_by_text("Completed updates · active counters", exact=True)).to_be_visible(timeout=60000)
             completed = page.get_by_role("region", name="Completed updates · active counters", exact=True)
             expect(completed.get_by_text(re.compile(r"^[1-9][0-9]*(?:[.,][0-9]+)?\s*[kKMGT]?$"), exact=True).first).to_be_visible(timeout=60000)

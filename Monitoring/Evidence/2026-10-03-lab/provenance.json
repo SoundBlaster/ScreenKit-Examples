@@ -1,0 +1,64 @@
+{
+  "classification": "simulator-smoke",
+  "validatedImplementationCommit": "7b0f24deef766a67deaa79355e766ae8bbef9bea",
+  "buildBaseCommit": "45fb0e494f6cbbc58093921a982dfdcc73e7b9f2",
+  "buildWorkingTree": "Implementation changes were uncommitted during the Release build. Every compiled app/adapter input and project pin below matches the validated implementation commit.",
+  "toolchain": "Xcode 27.1\nBuild version 27A9269",
+  "buildConfiguration": "Release",
+  "buildDestinationRuntime": "iOS 18.6",
+  "binarySHA256": "156b98f5ea95ecd1fcfa148435e38624480af259df29bcd2a30950e5343d9bb1",
+  "sourceSHA256": {
+    "ScreenKitLab/Telemetry/Info.plist": "1ba8c787349591537abeed4c2ff77f53b9ce89742a1cbe743de0771dd91ef4a1",
+    "ScreenKitLab/Telemetry/LabBenchmark.swift": "1e8cdcfc3b99fb4d23c2cd76b71eec912027150ab8c44b82f0f9000cbe3b9e8c",
+    "ScreenKitLab/Telemetry/LabTelemetrySession.swift": "9db6904c7128ba7d0220129d4fdb5b0c404d2c4219f668a85596dfcb042f8a4f",
+    "ScreenKitLabTelemetry.xcodeproj/project.pbxproj": "450c7894daba4282cb85feacb68223aa509275f7239fbe8648f4e8cc60edf68a",
+    "ScreenKitLabTelemetry.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved": "3f41877c0827b1a243b3faccad34c9d3dbd29a4718ade9fb830b55d8b1b0bae4",
+    "ScreenKitLabTelemetry.xcodeproj/xcshareddata/xcschemes/ScreenKitLabTelemetry.xcscheme": "5a1b01461a6363ee761bf23d024382e62593e9ee4b2c827fd5f1ad77a4257ab3",
+    "Packages/ScreenKitOpenTelemetry/Package.swift": "8f3e9e98863db5c8139c194b27789637dcd76defe365269553b72b2a617596e4",
+    "Packages/ScreenKitOpenTelemetry/Sources/ScreenKitOpenTelemetry/ScreenOpenTelemetry.swift": "075fcc11290c122ce80a6259a1c2bfc34733bd07c6f9880997b4273270c07676",
+    "Packages/ScreenKitTelemetryMonitor/Package.resolved": "c1628d105f1690bf8e3a5e2ee0a12ef8334a443418a31a0353664a612553eeb5",
+    "Packages/ScreenKitTelemetryMonitor/Package.swift": "d803f57c1cc8d29b73c887d317b4b34394555b7f5b6c1596f7dfe7412db20b8a",
+    "Packages/ScreenKitTelemetryMonitor/Sources/ScreenKitTelemetryMonitor/ScreenTelemetryMonitor.swift": "64594836725a0e534448cc2043647991aafc4d032e0b4f3e4440b0fff2d97b34",
+    "Packages/ScreenKitTelemetryMonitor/Sources/ScreenKitTelemetryProducer/main.swift": "a8bf192d957a0ac79ddd0d9769239d582100890960e50118a49ffe7d77428697",
+    "ScreenKitLab/Sources/ContainerProbe.swift": "f235fdaa1af23be59a78d5408156e3beeec81a4204c6cce0f681aa1b6e9eb964",
+    "ScreenKitLab/Sources/LegacyContentProbe.swift": "9dcf31d7228af6182c1485b0a2bd0e52755f375db5d844fbb48316a5eb2c3493",
+    "ScreenKitLab/Sources/MixedContentProbe.swift": "eba127783f2df9272a3466d0d3c05e8e9a983260bdfb925cd7c4c7114dee8861",
+    "ScreenKitLab/Sources/ScreenKitLabApp.swift": "a9c530cbdbd88772366c8e46902e6f506fc810ea485f14c23e43b91acad58624",
+    "ScreenKitLab/Sources/ScreenMacroProbe.swift": "cf5537ae17f8c42af665dc3699ec2e88c2ab0666bde07c668017d704acdbe5d8",
+    "ScreenKitLab/Sources/SectionedContentProbe.swift": "071e9e107de0ff73fc282b9e9a8c94c449a5734359ab58c224272048586751fc"
+  },
+  "verificationScriptsSHA256": {
+    "Monitoring/verify.py": "97ada8629d0bfdae5fe14586b09741315bcba2b1abf31aefb46a0f46d48f2b55",
+    "Monitoring/verify_lab.py": "c2aa74384b6c3d4131f26e7b2e1fdbc952260850d0dd71b6d83daf806301f0ef",
+    "Monitoring/browser_smoke.py": "35fad169e5f969ad003e421dd550861fb5cb572ec34e7c9a9fcefecb2d738110"
+  },
+  "runs": {
+    "ios18": {
+      "runID": "96221254-1CEF-4936-9188-4EBB8945F21C",
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-18-6",
+      "device": "iPhone17,1",
+      "execution": "Same Release app, repeated on iOS18 without debugger/DeviceInteraction/concurrent build, after recovering Docker.",
+      "startedAt": "2026-10-02T23:17:24Z",
+      "finishedAt": "2026-10-02T23:17:38Z",
+      "binaryReused": true
+    },
+    "ios27-quiet": {
+      "runID": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149",
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+      "device": "iPhone19,2",
+      "execution": "Same Release app, started via simctl without debugger, with no DeviceInteraction session or concurrent build. Simulator smoke only.",
+      "startedAt": "2026-10-02T23:13:59Z",
+      "finishedAt": "2026-10-02T23:14:13Z",
+      "binaryReused": true
+    },
+    "ios27-ui": {
+      "runID": "DB4D3CCE-3F6A-4FE5-BE45-51828BB2B576",
+      "runtime": "com.apple.CoreSimulator.SimRuntime.iOS-27-0",
+      "device": "iPhone19,2",
+      "execution": "Already-built same Release app, iOS27 DeviceInteraction UI check. UI tooling active; smoke evidence only.",
+      "startedAt": "2026-10-02T23:08:30Z",
+      "finishedAt": "2026-10-02T23:08:44Z",
+      "binaryReused": true
+    }
+  }
+}

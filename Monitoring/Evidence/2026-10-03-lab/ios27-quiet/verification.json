@@ -1,0 +1,483 @@
+{
+  "runID": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149",
+  "classification": "simulator-smoke",
+  "pairs": [
+    {
+      "pair": 0,
+      "order": [
+        "disabled",
+        "otlp"
+      ],
+      "disabledMedianSeconds": 0.0178165,
+      "otlpMedianSeconds": 0.0192803125,
+      "ratio": 1.0821604972918364
+    },
+    {
+      "pair": 1,
+      "order": [
+        "otlp",
+        "disabled"
+      ],
+      "disabledMedianSeconds": 0.019313208,
+      "otlpMedianSeconds": 0.019599875500000002,
+      "ratio": 1.0148430804452582
+    },
+    {
+      "pair": 2,
+      "order": [
+        "disabled",
+        "otlp"
+      ],
+      "disabledMedianSeconds": 0.019244208,
+      "otlpMedianSeconds": 0.019077166,
+      "ratio": 0.9913198818054763
+    },
+    {
+      "pair": 3,
+      "order": [
+        "otlp",
+        "disabled"
+      ],
+      "disabledMedianSeconds": 0.019229917,
+      "otlpMedianSeconds": 0.018535000000000003,
+      "ratio": 0.9638627145400578
+    }
+  ],
+  "medianPairedRatio": 1.0030814811253672,
+  "pairRatioRange": [
+    0.9638627145400578,
+    1.0821604972918364
+  ],
+  "thermalStates": [
+    0
+  ],
+  "lowPowerMode": false,
+  "backendVerified": true,
+  "backendEvidence": [
+    {
+      "instance": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149-0-1",
+      "metrics": {
+        "updates": 24.0,
+        "histogramCount": 24.0,
+        "rendererCalls": 24000.0
+      },
+      "traces": [
+        {
+          "traceID": "a0302075b59d10e83cd1d03c18bbf97b",
+          "children": 6
+        },
+        {
+          "traceID": "f0ce19560ecff187b9698c731c33b080",
+          "children": 6
+        },
+        {
+          "traceID": "96c2c74e8f74f1aa8310429306409fb0",
+          "children": 6
+        },
+        {
+          "traceID": "1c26ef8ca8b092c471f53da570ee6ed2",
+          "children": 6
+        },
+        {
+          "traceID": "2df2c4c0e7e01c3d222b67590bd29159",
+          "children": 6
+        },
+        {
+          "traceID": "e194811f5ec2ad9c06f45b4ce98bd370",
+          "children": 6
+        },
+        {
+          "traceID": "196e88057337f6d9f2dd2e15922c98b8",
+          "children": 6
+        },
+        {
+          "traceID": "4f0b4fa55a9de9f11dd49536a8a9a2a3",
+          "children": 6
+        },
+        {
+          "traceID": "394af945aab27afb6a7d14872d8b039b",
+          "children": 6
+        },
+        {
+          "traceID": "831d7b3a739de1a4b2e5a985df72f5",
+          "children": 6
+        },
+        {
+          "traceID": "a394a4993b27e9f942afc4072399cf9",
+          "children": 6
+        },
+        {
+          "traceID": "56c936e605161f936ff01687db4c2eda",
+          "children": 6
+        },
+        {
+          "traceID": "bee91cb3ca2c9df57b90b6c8955039e2",
+          "children": 6
+        },
+        {
+          "traceID": "9c5f21f7ceba24e898b2c713d627c42b",
+          "children": 6
+        },
+        {
+          "traceID": "4edd49cb97aaf62a1e14766e37a38f12",
+          "children": 6
+        },
+        {
+          "traceID": "9953320490a21d23c1922c9070eec2",
+          "children": 6
+        },
+        {
+          "traceID": "403425f72e93a9f2ac099379d5fd4674",
+          "children": 6
+        },
+        {
+          "traceID": "4754a93e816a5d3ad08abf195ba96837",
+          "children": 6
+        },
+        {
+          "traceID": "ee9f5383cb5a5662b675e855f625537",
+          "children": 6
+        },
+        {
+          "traceID": "84c114cf4774713fc9fc000ff30c8e60",
+          "children": 6
+        },
+        {
+          "traceID": "7dc4407321850cf0678f2929e6827d19",
+          "children": 6
+        },
+        {
+          "traceID": "116da2219daa4478d988be2fd656b8ec",
+          "children": 6
+        },
+        {
+          "traceID": "922a80b001f8a056d17843f99af404d0",
+          "children": 6
+        },
+        {
+          "traceID": "abb422acb2d38b85ba28ff86719cdebe",
+          "children": 6
+        }
+      ]
+    },
+    {
+      "instance": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149-1-0",
+      "metrics": {
+        "updates": 24.0,
+        "histogramCount": 24.0,
+        "rendererCalls": 24000.0
+      },
+      "traces": [
+        {
+          "traceID": "ace0d8b093137aa9253aad74cb824cfe",
+          "children": 6
+        },
+        {
+          "traceID": "6a0b5b4bca39b4abfc3067f52e922e31",
+          "children": 6
+        },
+        {
+          "traceID": "a22d61b188a53ed09ca00f43be663a9f",
+          "children": 6
+        },
+        {
+          "traceID": "2b32df6de3f56e93e12a954e3b944942",
+          "children": 6
+        },
+        {
+          "traceID": "7c809921c8a5eb64b0119f919f024db9",
+          "children": 6
+        },
+        {
+          "traceID": "6892cbb316c3cea7bd7f3cd378b9a599",
+          "children": 6
+        },
+        {
+          "traceID": "d8d69064ad23374d3cf1ea0170a8552b",
+          "children": 6
+        },
+        {
+          "traceID": "3d432ea784840f67ae7d74dc4939fd8c",
+          "children": 6
+        },
+        {
+          "traceID": "68714724b7bdfe20097950996fe79270",
+          "children": 6
+        },
+        {
+          "traceID": "b18e370efc246e09113cd846b0271409",
+          "children": 6
+        },
+        {
+          "traceID": "93c39d01825a57f0942f6eec3fcd328f",
+          "children": 6
+        },
+        {
+          "traceID": "97a5c83cd9831c810762d17b77976704",
+          "children": 6
+        },
+        {
+          "traceID": "89cb18df23fe0f13de0e2e74187d2c11",
+          "children": 6
+        },
+        {
+          "traceID": "69aeb158cd0953cc478bb303e682d4ee",
+          "children": 6
+        },
+        {
+          "traceID": "99e5b15cc49a929e85b45f45a60619a8",
+          "children": 6
+        },
+        {
+          "traceID": "a166d03c58e205a9c37d1f12f9682e34",
+          "children": 6
+        },
+        {
+          "traceID": "4e10d5295bbe91252420fb7560541771",
+          "children": 6
+        },
+        {
+          "traceID": "95c68764752a0858a4b31a5b7b375259",
+          "children": 6
+        },
+        {
+          "traceID": "794711bd7727bd10e738c4a678e00162",
+          "children": 6
+        },
+        {
+          "traceID": "1a1aac41ca8635980fb854c6b0a90bd6",
+          "children": 6
+        },
+        {
+          "traceID": "daf6e6e6bea06d649b148a4fbcb8bd03",
+          "children": 6
+        },
+        {
+          "traceID": "7143a908f83bc5421c79438b84f60904",
+          "children": 6
+        },
+        {
+          "traceID": "fef1d8c872094620edbf4875ae0f0b10",
+          "children": 6
+        },
+        {
+          "traceID": "ae07bc5c622652e9c94ba2087680b8ed",
+          "children": 6
+        }
+      ]
+    },
+    {
+      "instance": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149-2-1",
+      "metrics": {
+        "updates": 24.0,
+        "histogramCount": 24.0,
+        "rendererCalls": 24000.0
+      },
+      "traces": [
+        {
+          "traceID": "5f84dd75ce16eaeefde671543f1c7450",
+          "children": 6
+        },
+        {
+          "traceID": "1ae925d4b7b137c7e43193bc05d69476",
+          "children": 6
+        },
+        {
+          "traceID": "9ed6f9daf85d56230e46391117f681e2",
+          "children": 6
+        },
+        {
+          "traceID": "21182a883a1cf407c05afd931a8182c8",
+          "children": 6
+        },
+        {
+          "traceID": "f5f0df77b44407952f07f2eff09181ff",
+          "children": 6
+        },
+        {
+          "traceID": "911a4d1cc2d34c5f3ff8e069936a762d",
+          "children": 6
+        },
+        {
+          "traceID": "f3f35ad733b34a67ef287e93bf1f9862",
+          "children": 6
+        },
+        {
+          "traceID": "a04245ad8f17bfb957d372baef4ab768",
+          "children": 6
+        },
+        {
+          "traceID": "2fac31fe93c3e5a7852c37d827c6b1a1",
+          "children": 6
+        },
+        {
+          "traceID": "c9163214ac3544718916aacb7d8d7c0f",
+          "children": 6
+        },
+        {
+          "traceID": "9620778c2b9ddbada636d49d98778797",
+          "children": 6
+        },
+        {
+          "traceID": "768094b726a2014a4ad9f81e536a7f3b",
+          "children": 6
+        },
+        {
+          "traceID": "bbfd5aa4fc78bd54b9c88407a5aa9d92",
+          "children": 6
+        },
+        {
+          "traceID": "5bc8f23cd3bf4e6ade64513f6f160787",
+          "children": 6
+        },
+        {
+          "traceID": "2ce667e18839e9f405fb9ae54eff00ed",
+          "children": 6
+        },
+        {
+          "traceID": "8a2f7eed6483532264253d5b7314ed73",
+          "children": 6
+        },
+        {
+          "traceID": "8cce9218bee43285f3bea1fe5d4c4948",
+          "children": 6
+        },
+        {
+          "traceID": "7f42de934cdb2aba4fef3fd40e6f141b",
+          "children": 6
+        },
+        {
+          "traceID": "50c103ec2a07ca06b77210b58b2a952f",
+          "children": 6
+        },
+        {
+          "traceID": "fcd7588b7c1931c4ca0af77cdf90a8e5",
+          "children": 6
+        },
+        {
+          "traceID": "f1e25579603b24cf733492f5b1ca4843",
+          "children": 6
+        },
+        {
+          "traceID": "d554bf75444f78d99f1a7fc03f643a33",
+          "children": 6
+        },
+        {
+          "traceID": "40b9d613a539cc31a65f5d72cda05f8",
+          "children": 6
+        },
+        {
+          "traceID": "bf3b571156599fde108d3b9b65e2e060",
+          "children": 6
+        }
+      ]
+    },
+    {
+      "instance": "DA4B40A2-39D8-499E-A9C5-1F2150B6F149-3-0",
+      "metrics": {
+        "updates": 24.0,
+        "histogramCount": 24.0,
+        "rendererCalls": 24000.0
+      },
+      "traces": [
+        {
+          "traceID": "3fe7e50deb65f3b3fa5492063084258",
+          "children": 6
+        },
+        {
+          "traceID": "a940145f8bc12c6ed86676752d037837",
+          "children": 6
+        },
+        {
+          "traceID": "98ddd6060b70ffc74b64033a6af7adfc",
+          "children": 6
+        },
+        {
+          "traceID": "8e203e2aa4aa2dc47810ef7168fb276e",
+          "children": 6
+        },
+        {
+          "traceID": "2f408fab08aa04124d7e8a0dcc61bb8d",
+          "children": 6
+        },
+        {
+          "traceID": "89b8b81d13855d60af1191fd141dade3",
+          "children": 6
+        },
+        {
+          "traceID": "6b3b10cf883cc658c065ccb70729ef6f",
+          "children": 6
+        },
+        {
+          "traceID": "cc7d0b22bbed22924e0bf13118cf538d",
+          "children": 6
+        },
+        {
+          "traceID": "cbbcf9fd6e6439ff1d81f97ce442df4",
+          "children": 6
+        },
+        {
+          "traceID": "45ae7f24d50b37de27dbe60ac18d121b",
+          "children": 6
+        },
+        {
+          "traceID": "8249c71976ff0cc6b602d4cf59e3433a",
+          "children": 6
+        },
+        {
+          "traceID": "60597d1690db426cb92dd8f35dc516bd",
+          "children": 6
+        },
+        {
+          "traceID": "c20dc81a559b89efa2edd541e9e65aaa",
+          "children": 6
+        },
+        {
+          "traceID": "1feae3ad0949e297248ac7b6e29d7cc7",
+          "children": 6
+        },
+        {
+          "traceID": "eb6d10acc901678f2c087617728531a7",
+          "children": 6
+        },
+        {
+          "traceID": "85c5a251ac0266a1c9b47c2ad1d88a33",
+          "children": 6
+        },
+        {
+          "traceID": "eb48321d2632ba43d3e8b942e6f76e7a",
+          "children": 6
+        },
+        {
+          "traceID": "48e3c5a2240d1822021f875b123627c9",
+          "children": 6
+        },
+        {
+          "traceID": "8e18507274abfc12d90c3f94ea22bf0f",
+          "children": 6
+        },
+        {
+          "traceID": "bfcfc7742dfb9b805e66c65d66e9d8b0",
+          "children": 6
+        },
+        {
+          "traceID": "1075d040ba1ecfbfc6337e4e10d39699",
+          "children": 6
+        },
+        {
+          "traceID": "af0a8f17ce3fc30380e12103bc883643",
+          "children": 6
+        },
+        {
+          "traceID": "f16b10b7fd05be61f9e26023b804f75",
+          "children": 6
+        },
+        {
+          "traceID": "8180d3e727c6ff4fc71072a8c1110eb6",
+          "children": 6
+        }
+      ]
+    }
+  ],
+  "scope": "Explicit nonanimated mixed-list update completion, including layout; not frame/GPU timing. No performance threshold established."
+}

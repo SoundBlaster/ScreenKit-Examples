@@ -26,3 +26,12 @@ that CI runtime result is separate from the local iOS 18.6 proof above.
 
 No physical-device benchmark, display/frame/GPU measurement, public deployment,
 or bounded offline delivery is claimed by these checks.
+
+## Real ScreenKitLab integration
+
+The optional native Lab project now also exports actual mixed-list updates.
+Its [verification record](../ScreenKitLab/Telemetry/VERIFICATION.md) includes
+passing iOS 18.6 and iOS 27.0 network checks, every raw off/on sample and trace
+receipt, a final-metric shutdown regression fix, and the remaining device
+performance gate. These app measurements are separate from the synthetic
+pipeline checks above.
