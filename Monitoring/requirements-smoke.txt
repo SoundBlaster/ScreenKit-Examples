@@ -1,0 +1,4 @@
+# Official SDK/exporter; only needed by the Linux pipeline smoke test.
+opentelemetry-sdk==1.45.0
+opentelemetry-exporter-otlp-proto-http==1.45.0
+playwright==1.63.0

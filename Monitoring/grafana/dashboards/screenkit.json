@@ -1,0 +1,648 @@
+{
+  "uid": "screenkit-ui",
+  "title": "ScreenKit · UI performance",
+  "description": "Source metrics and sampled traces. Provisioned by ScreenKit-Examples.",
+  "schemaVersion": 42,
+  "version": 1,
+  "editable": false,
+  "tags": [
+    "ScreenKit",
+    "OpenTelemetry"
+  ],
+  "timezone": "browser",
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "templating": {
+    "list": [
+      {
+        "name": "service",
+        "label": "Service",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "screenkit-prometheus"
+        },
+        "definition": "label_values(screenkit_update_count, service_name)",
+        "query": {
+          "query": "label_values(screenkit_update_count, service_name)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "current": {
+          "selected": true,
+          "text": "All",
+          "value": "$__all"
+        },
+        "options": []
+      },
+      {
+        "name": "screen",
+        "label": "Screen",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "screenkit-prometheus"
+        },
+        "definition": "label_values(screenkit_update_count{service_name=~\"$service\"}, app_screen_name)",
+        "query": {
+          "query": "label_values(screenkit_update_count{service_name=~\"$service\"}, app_screen_name)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "current": {
+          "selected": true,
+          "text": "All",
+          "value": "$__all"
+        },
+        "options": []
+      },
+      {
+        "name": "kind",
+        "label": "Update kind",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "screenkit-prometheus"
+        },
+        "definition": "label_values(screenkit_update_count, screenkit_update_kind)",
+        "query": {
+          "query": "label_values(screenkit_update_count, screenkit_update_kind)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "current": {
+          "selected": true,
+          "text": "All",
+          "value": "$__all"
+        },
+        "options": []
+      },
+      {
+        "name": "source",
+        "label": "Source",
+        "type": "query",
+        "datasource": {
+          "type": "prometheus",
+          "uid": "screenkit-prometheus"
+        },
+        "definition": "label_values(screenkit_update_count, screenkit_telemetry_source)",
+        "query": {
+          "query": "label_values(screenkit_update_count, screenkit_telemetry_source)",
+          "refId": "StandardVariableQuery"
+        },
+        "refresh": 1,
+        "sort": 1,
+        "includeAll": true,
+        "allValue": ".*",
+        "multi": true,
+        "current": {
+          "selected": true,
+          "text": "All",
+          "value": "$__all"
+        },
+        "options": []
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "links": [
+    {
+      "title": "Tempo · trace search and waterfall",
+      "url": "/explore",
+      "type": "link",
+      "targetBlank": false
+    }
+  ],
+  "panels": [
+    {
+      "id": 1,
+      "title": "ScreenKit UI telemetry · measurement contract",
+      "type": "text",
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 6
+      },
+      "description": "",
+      "options": {
+        "mode": "markdown",
+        "content": "**Settled:** snapshot + final layout, before client completion. No frame/GPU/display timing. Metrics cover completed updates; percentiles are histogram bucket estimates. Traces are sampled. Totals describe active streams, not the selected range. **Source:** `synthetic` / `ui-test` / `app`."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Completed updates · active counters",
+      "type": "stat",
+      "gridPos": {
+        "x": 0,
+        "y": 6,
+        "w": 6,
+        "h": 4
+      },
+      "description": "Latest cumulative values across selected active instances. Not a time-range increase.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(screenkit_update_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"})",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": false,
+          "instant": true,
+          "legendFormat": "Completed"
+        }
+      ],
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Mean settled · active histograms",
+      "type": "stat",
+      "gridPos": {
+        "x": 6,
+        "y": 6,
+        "w": 6,
+        "h": 4
+      },
+      "description": "Cumulative histogram sum/count for completed updates.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(screenkit_update_settled_duration_sum{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}) / sum(screenkit_update_settled_duration_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"})",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": false,
+          "instant": true,
+          "legendFormat": "Mean"
+        }
+      ],
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 4,
+      "title": "P95 settled · rate window",
+      "type": "stat",
+      "gridPos": {
+        "x": 12,
+        "y": 6,
+        "w": 6,
+        "h": 4
+      },
+      "description": "Bucket estimate from source histograms, independent of trace sampling. Requires two scrapes.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(screenkit_update_settled_duration_bucket{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": false,
+          "instant": true,
+          "legendFormat": "p95"
+        }
+      ],
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Other outcomes · active counters",
+      "type": "stat",
+      "gridPos": {
+        "x": 18,
+        "y": 6,
+        "w": 6,
+        "h": 4
+      },
+      "description": "Cancelled, rejected, or unavailable state. Not included in completed duration/work histograms.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum(screenkit_update_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome!=\"completed\"})",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": false,
+          "instant": true,
+          "legendFormat": "Other"
+        }
+      ],
+      "options": {
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "values": false
+        },
+        "orientation": "auto",
+        "colorMode": "value",
+        "graphMode": "none",
+        "textMode": "auto"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Settled time percentiles",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 10,
+        "w": 12,
+        "h": 8
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 6,
+            "showPoints": "never",
+            "spanNulls": false
+          }
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.5, sum by (le) (rate(screenkit_update_settled_duration_bucket{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "p50"
+        },
+        {
+          "refId": "B",
+          "expr": "histogram_quantile(0.95, sum by (le) (rate(screenkit_update_settled_duration_bucket{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "p95"
+        },
+        {
+          "refId": "C",
+          "expr": "histogram_quantile(0.99, sum by (le) (rate(screenkit_update_settled_duration_bucket{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "p99"
+        }
+      ],
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "calcs": []
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "title": "Mean phase duration · each occurrence",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 10,
+        "w": 12,
+        "h": 8
+      },
+      "description": "Phases may overlap. Do not add them or interpret them as CPU time.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "s",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 6,
+            "showPoints": "never",
+            "spanNulls": false
+          }
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (screenkit_phase) (rate(screenkit_update_phase_duration_sum{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])) / sum by (screenkit_phase) (rate(screenkit_update_phase_duration_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "{{screenkit_phase}}"
+        }
+      ],
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "calcs": []
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "title": "Update throughput and outcomes",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 0,
+        "y": 18,
+        "w": 12,
+        "h": 8
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ops",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 6,
+            "showPoints": "never",
+            "spanNulls": false
+          }
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (screenkit_update_outcome) (rate(screenkit_update_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\"}[$__rate_interval]))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "{{screenkit_update_outcome}}"
+        }
+      ],
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "calcs": []
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "title": "Work per completed update",
+      "type": "timeseries",
+      "gridPos": {
+        "x": 12,
+        "y": 18,
+        "w": 12,
+        "h": 8
+      },
+      "description": "Renderer/cell/supplementary calls and reload/reconfigure work per completed update.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "drawStyle": "line",
+            "lineWidth": 2,
+            "fillOpacity": 6,
+            "showPoints": "never",
+            "spanNulls": false
+          }
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "screenkit-prometheus"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by (screenkit_work) (rate(screenkit_work_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])) / scalar(sum(rate(screenkit_update_count{service_name=~\"${service:regex}\",app_screen_name=~\"${screen:regex}\",screenkit_update_kind=~\"${kind:regex}\",screenkit_telemetry_source=~\"${source:regex}\",screenkit_update_outcome=\"completed\"}[$__rate_interval])))",
+          "datasource": {
+            "type": "prometheus",
+            "uid": "screenkit-prometheus"
+          },
+          "range": true,
+          "instant": false,
+          "legendFormat": "{{screenkit_work}}"
+        }
+      ],
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "calcs": []
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "desc"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "title": "Recent sampled update traces · open a Trace ID for waterfall",
+      "type": "table",
+      "gridPos": {
+        "x": 0,
+        "y": 26,
+        "w": 24,
+        "h": 10
+      },
+      "description": "Trace search is sampling-dependent. Aggregates come from the source histograms above.",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "short",
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "datasource": {
+        "type": "tempo",
+        "uid": "screenkit-tempo"
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "tempo",
+            "uid": "screenkit-tempo"
+          },
+          "queryType": "traceql",
+          "query": "{ name = \"screenkit.update\" && resource.service.name =~ \"${service:regex}\" && span.app.screen.name =~ \"${screen:regex}\" && span.screenkit.update.kind =~ \"${kind:regex}\" && resource.screenkit.telemetry.source =~ \"${source:regex}\" }",
+          "limit": 30,
+          "tableType": "traces"
+        }
+      ],
+      "options": {
+        "showHeader": true,
+        "cellHeight": "sm",
+        "footer": {
+          "show": false
+        }
+      }
+    }
+  ]
+}

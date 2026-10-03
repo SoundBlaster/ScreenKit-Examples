@@ -27,6 +27,13 @@ smoke report. It uses the corresponding ScreenKit development PR; both apps
 continue to consume their released package pins. See its README for build and
 measurement limits.
 
+The [monitoring workbench](Monitoring) adds a provisioned Grafana dashboard,
+OpenTelemetry Collector, Prometheus metrics and Tempo trace waterfalls. Start it
+with `docker compose -f Monitoring/compose.yml up -d`; the optional
+[ScreenKitTelemetryMonitor](Packages/ScreenKitTelemetryMonitor) package uses the
+official Swift OTLP/HTTP exporters. A labeled synthetic producer previews the
+board, while UIKit consumer tests validate the screen update integration.
+
 ## Requirements
 
 - Xcode 27 or later with the Swift 6.2 toolchain

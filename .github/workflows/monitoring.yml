@@ -1,0 +1,97 @@
+name: Monitoring workbench
+
+on:
+  push:
+    branches: [main]
+    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', '.github/workflows/monitoring.yml']
+  pull_request:
+    paths: ['Monitoring/**', 'Packages/ScreenKitTelemetryMonitor/**', 'Packages/ScreenKitOpenTelemetry/**', '.github/workflows/monitoring.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: monitor-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  client:
+    name: Official OTLP exporter and UIKit consumer
+    runs-on: xcode-27
+    timeout-minutes: 30
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_27.0.app/Contents/Developer
+      MACOSX_DEPLOYMENT_TARGET: '12.0'
+    defaults:
+      run:
+        working-directory: Packages/ScreenKitTelemetryMonitor
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Swift unit tests
+        run: swift test -j 2
+      - name: Release UIKit consumer test
+        run: |
+          xcodebuild -quiet -scheme ScreenKitTelemetryMonitor-Package -configuration Release \
+            -destination 'platform=iOS Simulator,name=iPhone 17,OS=27.0' \
+            -skipMacroValidation -parallel-testing-enabled NO \
+            -test-timeouts-enabled YES -maximum-test-execution-time-allowance 120 \
+            -resultBundlePath "$RUNNER_TEMP/ScreenKitMonitor.xcresult" test
+      - name: Upload consumer results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenkit-monitor-client-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ScreenKitMonitor.xcresult
+            Packages/ScreenKitTelemetryMonitor/Package.resolved
+          retention-days: 14
+
+  stack:
+    name: Grafana and OTLP pipeline
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install official SDK and browser test dependencies
+        run: |
+          pip install -r Monitoring/requirements-smoke.txt
+          python -m playwright install --with-deps chromium
+      - name: Start the workbench
+        run: |
+          docker compose -f Monitoring/compose.yml config --quiet
+          docker compose -f Monitoring/compose.yml up -d
+          python Monitoring/verify.py --ready
+      - name: Export synthetic source events and verify ingestion
+        run: |
+          mkdir -p "$RUNNER_TEMP/screenkit-monitor"
+          python Monitoring/smoke.py --output "$RUNNER_TEMP/screenkit-monitor/fixture.json"
+          python Monitoring/verify.py --fixture "$RUNNER_TEMP/screenkit-monitor/fixture.json" \
+            --output "$RUNNER_TEMP/screenkit-monitor/verification.json"
+      - name: Verify the Grafana dashboard in a browser
+        run: python Monitoring/browser_smoke.py --output "$RUNNER_TEMP/screenkit-monitor"
+      - name: Collect diagnostics
+        if: ${{ always() }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/screenkit-monitor"
+          docker compose -f Monitoring/compose.yml ps -a > "$RUNNER_TEMP/screenkit-monitor/services.txt"
+          docker compose -f Monitoring/compose.yml logs --no-color > "$RUNNER_TEMP/screenkit-monitor/services.log"
+          docker compose -f Monitoring/compose.yml config > "$RUNNER_TEMP/screenkit-monitor/compose-resolved.yml"
+          git rev-parse HEAD > "$RUNNER_TEMP/screenkit-monitor/commit.txt"
+      - name: Upload dashboard and ingestion evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenkit-monitor-stack-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/screenkit-monitor
+          retention-days: 14
+      - name: Stop CI services
+        if: ${{ always() }}
+        run: docker compose -f Monitoring/compose.yml down
